@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-03-20T04:33:36.126Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="wldFUeo2FJD2LeKpJqN2" version="14.4.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-03-20T04:40:47.244Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="oZEB4uh4GVFu4Iza2xFB" version="14.4.8" type="github">
   <diagram id="CXttLjTAoCu7LxISHfBc" name="Page-1">
-    <mxGraphModel dx="1021" dy="529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -327,6 +327,9 @@
         <mxCell id="qaXu_HohoRmrBdPHy3pz-158" value="" style="shape=line;strokeWidth=2;html=1;strokeColor=#DFE1E5;resizeWidth=1" vertex="1" parent="1">
           <mxGeometry x="1050.5" y="501" width="160" height="10" as="geometry" />
         </mxCell>
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-203" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.539;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=16;" edge="1" parent="1" source="qaXu_HohoRmrBdPHy3pz-160" target="qaXu_HohoRmrBdPHy3pz-198">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-160" value="&lt;h2 class=&quot;title&quot; style=&quot;margin: 0px ; padding: 0px ; color: rgb(17 , 17 , 17) ; line-height: 1.125 ; letter-spacing: 0.013em ; font-family: &amp;#34;sf pro display&amp;#34; , &amp;#34;sf pro icons&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif ; background-color: rgb(250 , 250 , 250)&quot;&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;Topics&lt;/font&gt;&lt;/h2&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="1091" y="582" width="119" height="20" as="geometry" />
         </mxCell>
@@ -335,6 +338,9 @@
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-162" value="" style="shape=line;strokeWidth=2;html=1;strokeColor=#DFE1E5;resizeWidth=1" vertex="1" parent="1">
           <mxGeometry x="1051.5" y="556" width="160" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-209" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=16;" edge="1" parent="1" source="qaXu_HohoRmrBdPHy3pz-163" target="qaXu_HohoRmrBdPHy3pz-205">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-163" value="&lt;h2 class=&quot;title&quot; style=&quot;margin: 0px ; padding: 0px ; color: rgb(17 , 17 , 17) ; line-height: 1.125 ; letter-spacing: 0.013em ; font-family: &amp;#34;sf pro display&amp;#34; , &amp;#34;sf pro icons&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif ; background-color: rgb(250 , 250 , 250)&quot;&gt;&lt;span style=&quot;font-size: 12px&quot;&gt;Example/Tutorial&lt;/span&gt;&lt;/h2&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="1092" y="634" width="119" height="20" as="geometry" />
@@ -375,15 +381,41 @@
         <mxCell id="qaXu_HohoRmrBdPHy3pz-191" value="&lt;u style=&quot;font-size: 12px&quot;&gt;&amp;lt; Back&lt;/u&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=70;fontSize=12;fontColor=#CCCC00;" vertex="1" parent="1">
           <mxGeometry x="1304" y="423.5" width="50" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-192" value="&lt;u style=&quot;font-size: 16px;&quot;&gt;+&lt;/u&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=70;fontSize=16;fontColor=#CCCC00;" vertex="1" parent="1">
-          <mxGeometry x="1470.5" y="423.5" width="20" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-195" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Add Frame/View/Content from&amp;nbsp;&lt;br&gt;developer.apple.com&lt;br&gt;/documentation/swiftui&lt;br&gt;/Component_Name&lt;/font&gt;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;align=center;" vertex="1" parent="1">
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-195" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Add Frame/View/Content from&amp;nbsp;&lt;br&gt;&lt;font color=&quot;#3333ff&quot;&gt;developer.apple.com&lt;br&gt;/documentation/swiftui&lt;br&gt;/Component_Name&lt;/font&gt;&lt;/font&gt;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;align=center;" vertex="1" parent="1">
           <mxGeometry x="1307" y="463.5" width="186" height="84.5" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-197" value="CL" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=70;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="1250" y="523.5" width="30" height="12" as="geometry" />
         </mxCell>
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-198" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.ios.iBgFlat;strokeColor=#18211b;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="536.5" width="200" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-199" value="&lt;b&gt;Component_Name&lt;br&gt;Topics&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;opacity=70;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="500.5" width="200" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-200" value="&lt;u style=&quot;font-size: 12px&quot;&gt;&amp;lt; Back&lt;/u&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=70;fontSize=12;fontColor=#CCCC00;" vertex="1" parent="1">
+          <mxGeometry x="1544" y="505" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-202" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Add Topics from&amp;nbsp;&lt;br&gt;&lt;font color=&quot;#3333ff&quot;&gt;developer.apple.com&lt;br&gt;/documentation/swiftui&lt;br&gt;/Component_Name&lt;/font&gt;&lt;/font&gt;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1547" y="545" width="186" height="84.5" as="geometry" />
+        </mxCell>
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-204" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.ios.iBgFlat;strokeColor=#18211b;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="665.5" width="200" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-205" value="&lt;b&gt;Component_Name&lt;br&gt;Exam/Tutor&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;opacity=70;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="629.5" width="200" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-206" value="&lt;u style=&quot;font-size: 12px&quot;&gt;&amp;lt; Back&lt;/u&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=70;fontSize=12;fontColor=#CCCC00;" vertex="1" parent="1">
+          <mxGeometry x="1304" y="634" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-210" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.video_play;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="740" width="30" height="20" as="geometry" />
+        </mxCell>
+        <UserObject label="https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-a-tappable-button" link="https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-a-tappable-button" id="qaXu_HohoRmrBdPHy3pz-211">
+          <mxCell style="text;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="1560" y="690" width="550" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
