@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-03-20T04:40:47.244Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="oZEB4uh4GVFu4Iza2xFB" version="14.4.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-03-20T04:42:40.347Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="CMobFN7on9W6PzY80Veg" version="14.4.8" type="github">
   <diagram id="CXttLjTAoCu7LxISHfBc" name="Page-1">
-    <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="723" dy="375" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -408,14 +408,12 @@
         <mxCell id="qaXu_HohoRmrBdPHy3pz-206" value="&lt;u style=&quot;font-size: 12px&quot;&gt;&amp;lt; Back&lt;/u&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=70;fontSize=12;fontColor=#CCCC00;" vertex="1" parent="1">
           <mxGeometry x="1304" y="634" width="50" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-210" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.video_play;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="1460" y="740" width="30" height="20" as="geometry" />
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-212" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Add Topics from&amp;nbsp;&lt;br&gt;&lt;span style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#3333ff&quot;&gt;hackingwithswift.com/quick-start/swiftui/&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1304" y="670" width="186" height="84.5" as="geometry" />
         </mxCell>
-        <UserObject label="https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-a-tappable-button" link="https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-a-tappable-button" id="qaXu_HohoRmrBdPHy3pz-211">
-          <mxCell style="text;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
-            <mxGeometry x="1560" y="690" width="550" height="50" as="geometry" />
-          </mxCell>
-        </UserObject>
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-213" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.video_play;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1463" y="740" width="30" height="20" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
