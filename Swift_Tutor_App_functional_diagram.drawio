@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-03-27T08:24:59.920Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="8JUNYxq0NqvOza5tY5zm" version="14.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-03-27T08:40:39.422Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="jJsFQNwvdq7yzTzLUWEO" version="14.5.0" type="github">
   <diagram id="CXttLjTAoCu7LxISHfBc" name="Page-1">
-    <mxGraphModel dx="723" dy="375" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -223,76 +223,43 @@
           <mxGeometry x="481" y="947" width="35" height="35" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-118" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.ios.iBgFlat;strokeColor=#18211b;" parent="1" vertex="1">
-          <mxGeometry x="720" y="440.5" width="200" height="210" as="geometry" />
+          <mxGeometry x="720" y="485.5" width="200" height="109.5" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-119" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=1 4;" parent="1" vertex="1">
-          <mxGeometry x="730" y="455.5" width="180" height="180" as="geometry" />
+          <mxGeometry x="730" y="500.5" width="180" height="84.5" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-120" value="" style="shape=line;strokeWidth=2;html=1;strokeColor=#DFE1E5;resizeWidth=1" parent="1" vertex="1">
-          <mxGeometry x="740.5" y="465.5" width="160" height="10" as="geometry" />
+          <mxGeometry x="740.5" y="510.5" width="160" height="10" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-167" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.001;entryY=0.581;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="qaXu_HohoRmrBdPHy3pz-121" target="qaXu_HohoRmrBdPHy3pz-137" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="970" y="540" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="940" y="502" />
-              <mxPoint x="940" y="543" />
+              <mxPoint x="900" y="543" />
+              <mxPoint x="900" y="543" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-121" value="Botton" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="780" y="491.5" width="119" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-168" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.001;entryY=0.59;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="qaXu_HohoRmrBdPHy3pz-122" target="qaXu_HohoRmrBdPHy3pz-137" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="990" y="546.5" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-122" value="Text/Label" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="780" y="536.5" width="123" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-170" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.001;entryY=0.599;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="qaXu_HohoRmrBdPHy3pz-123" target="qaXu_HohoRmrBdPHy3pz-137" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1030" y="552" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="940" y="592" />
-              <mxPoint x="940" y="549" />
-              <mxPoint x="1000" y="549" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-123" value="Image" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="783" y="581.5" width="120" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-124" value="" style="shape=line;strokeWidth=2;html=1;strokeColor=#DFE1E5;resizeWidth=1" parent="1" vertex="1">
-          <mxGeometry x="740.5" y="615.5" width="150" height="10" as="geometry" />
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-121" value="Item UI Element" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="780" y="536.5" width="119" height="20" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-125" value="" style="shape=line;strokeWidth=2;html=1;strokeColor=#DFE1E5;resizeWidth=1" parent="1" vertex="1">
-          <mxGeometry x="741.5" y="520.5" width="160" height="10" as="geometry" />
-        </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-126" value="" style="shape=line;strokeWidth=2;html=1;strokeColor=#DFE1E5;resizeWidth=1" parent="1" vertex="1">
           <mxGeometry x="741.5" y="565.5" width="160" height="10" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-127" value="" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#D05C17;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.container_registry_image;" parent="1" vertex="1">
-          <mxGeometry x="741.5" y="482.5" width="35" height="35" as="geometry" />
-        </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-128" value="" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#D05C17;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.container_registry_image;" parent="1" vertex="1">
-          <mxGeometry x="741.5" y="530.5" width="35" height="35" as="geometry" />
-        </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-129" value="" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#D05C17;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.container_registry_image;" parent="1" vertex="1">
-          <mxGeometry x="740.5" y="577" width="35" height="35" as="geometry" />
+          <mxGeometry x="741.5" y="527.5" width="35" height="35" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-130" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000;opacity=70;align=center;" parent="1" vertex="1">
-          <mxGeometry x="720" y="390" width="200" height="29" as="geometry" />
+          <mxGeometry x="720" y="448" width="200" height="29" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-131" value="&lt;u style=&quot;font-size: 12px&quot;&gt;&amp;lt; Back&lt;/u&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=70;fontSize=12;fontColor=#CCCC00;" parent="1" vertex="1">
-          <mxGeometry x="724" y="394.5" width="50" height="20" as="geometry" />
+          <mxGeometry x="724" y="452.5" width="50" height="20" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-132" value="&lt;u style=&quot;font-size: 16px;&quot;&gt;+&lt;/u&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=70;fontSize=16;fontColor=#CCCC00;" parent="1" vertex="1">
-          <mxGeometry x="890.5" y="394.5" width="20" height="20" as="geometry" />
+          <mxGeometry x="890.5" y="452.5" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-133" value="&lt;span style=&quot;font-size: 10px&quot;&gt;&lt;b&gt;Components&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;opacity=70;" parent="1" vertex="1">
-          <mxGeometry x="770" y="394" width="120" height="20" as="geometry" />
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-133" value="&lt;span style=&quot;font-size: 10px&quot;&gt;&lt;b&gt;List UI Elements&lt;br&gt;&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;opacity=70;" parent="1" vertex="1">
+          <mxGeometry x="770" y="452" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-135" value="CL" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=70;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="665" y="516.5" width="30" height="20" as="geometry" />
@@ -312,7 +279,7 @@
         <mxCell id="qaXu_HohoRmrBdPHy3pz-196" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.005;entryY=0.796;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=16;" parent="1" source="qaXu_HohoRmrBdPHy3pz-156" target="qaXu_HohoRmrBdPHy3pz-178" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-156" value="Documentation" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-156" value="Why to learn?" style="html=1;fillColor=none;strokeColor=none;fontSize=10;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="1107" y="527" width="119" height="20" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-157" value="" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#D05C17;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.container_registry_image;" parent="1" vertex="1">
@@ -326,7 +293,7 @@
             <mxPoint x="1557" y="592.0169999999999" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-160" value="&lt;h2 class=&quot;title&quot; style=&quot;margin: 0px ; padding: 0px ; color: rgb(17 , 17 , 17) ; line-height: 1.125 ; letter-spacing: 0.013em ; font-family: &amp;#34;sf pro display&amp;#34; , &amp;#34;sf pro icons&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif ; background-color: rgb(250 , 250 , 250)&quot;&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;How to use?&lt;/font&gt;&lt;/h2&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-160" value="&lt;h2 class=&quot;title&quot; style=&quot;margin: 0px; padding: 0px; color: rgb(17, 17, 17); line-height: 1.125; letter-spacing: 0.013em; font-family: &amp;quot;sf pro display&amp;quot;, &amp;quot;sf pro icons&amp;quot;, &amp;quot;helvetica neue&amp;quot;, helvetica, arial, sans-serif; background-color: rgb(250, 250, 250); font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;How to use?&lt;/font&gt;&lt;/h2&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=10;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="1108" y="582" width="119" height="20" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-161" value="" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#D05C17;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.container_registry_image;" parent="1" vertex="1">
@@ -335,7 +302,7 @@
         <mxCell id="qaXu_HohoRmrBdPHy3pz-162" value="" style="shape=line;strokeWidth=2;html=1;strokeColor=#DFE1E5;resizeWidth=1" parent="1" vertex="1">
           <mxGeometry x="1068.5" y="556" width="160" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="qaXu_HohoRmrBdPHy3pz-163" value="&lt;h2 class=&quot;title&quot; style=&quot;margin: 0px ; padding: 0px ; line-height: 1.125 ; background-color: rgb(250 , 250 , 250)&quot;&gt;&lt;font color=&quot;#111111&quot; face=&quot;sf pro display, sf pro icons, helvetica neue, helvetica, arial, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 12px ; letter-spacing: 0.234px&quot;&gt;More exciting&lt;/span&gt;&lt;/font&gt;&lt;br&gt;&lt;/h2&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
+        <mxCell id="qaXu_HohoRmrBdPHy3pz-163" value="&lt;h2 class=&quot;title&quot; style=&quot;margin: 0px; padding: 0px; line-height: 1.125; background-color: rgb(250, 250, 250); font-size: 10px;&quot;&gt;&lt;font color=&quot;#111111&quot; face=&quot;sf pro display, sf pro icons, helvetica neue, helvetica, arial, sans-serif&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px; letter-spacing: 0.234px;&quot;&gt;What exciting things?&lt;/span&gt;&lt;/font&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/h2&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=10;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="1109" y="634" width="119" height="20" as="geometry" />
         </mxCell>
         <mxCell id="qaXu_HohoRmrBdPHy3pz-164" value="" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#D05C17;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.container_registry_image;" parent="1" vertex="1">
@@ -447,34 +414,34 @@
           <mxGeometry x="522.25" y="569.75" width="121.5" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FYXwXGc67_YSZuknPYZS-3" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_toolbar.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;Toolbar&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="521.62" y="595.25" width="121.5" height="20" as="geometry" />
+          <mxGeometry x="523" y="664" width="121.5" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FYXwXGc67_YSZuknPYZS-4" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_labels.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; outline: 0.313rem ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;Label&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="522.25" y="619.25" width="119" height="20" as="geometry" />
+          <mxGeometry x="520" y="618" width="119" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FYXwXGc67_YSZuknPYZS-5" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_status_bar.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;Status Bar&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="521" y="644.25" width="121.5" height="20" as="geometry" />
+          <mxGeometry x="679" y="814.25" width="121.5" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FYXwXGc67_YSZuknPYZS-6" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_navigation_bar.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;Navigation Bar&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="521.62" y="668.75" width="147.75" height="20" as="geometry" />
+          <mxGeometry x="679" y="708" width="131" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FYXwXGc67_YSZuknPYZS-7" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_tab_bar.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;Tab bar&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="521" y="692.25" width="147.75" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FYXwXGc67_YSZuknPYZS-9" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_imageview.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;Image View&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="521" y="712.75" width="147.75" height="20" as="geometry" />
+          <mxGeometry x="679" y="760" width="147.75" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FYXwXGc67_YSZuknPYZS-10" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_scrollview.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;Scroll View&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="521.62" y="734.25" width="147.75" height="20" as="geometry" />
+          <mxGeometry x="679" y="790" width="147.75" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FYXwXGc67_YSZuknPYZS-11" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_tableview.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;Table View&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="521" y="754.25" width="147.75" height="20" as="geometry" />
+          <mxGeometry x="679" y="834.25" width="147.75" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FYXwXGc67_YSZuknPYZS-12" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_splitview.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;Split View&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="521" y="774.25" width="147.75" height="20" as="geometry" />
+          <mxGeometry x="679" y="860" width="147.75" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FYXwXGc67_YSZuknPYZS-13" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_view_transition.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; outline: 0.313rem ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;View Transition&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="522.25" y="794.25" width="147.75" height="20" as="geometry" />
+          <mxGeometry x="679" y="734.25" width="141" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FYXwXGc67_YSZuknPYZS-14" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_picker.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;Pickers&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="523.5" y="814.25" width="147.75" height="20" as="geometry" />
@@ -490,6 +457,9 @@
         </mxCell>
         <mxCell id="FYXwXGc67_YSZuknPYZS-18" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_icons.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;Icons&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="520" y="894.25" width="147.75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FYXwXGc67_YSZuknPYZS-23" value="&lt;a href=&quot;https://www.tutorialspoint.com/ios/ios_ui_elements_buttons.htm&quot; style=&quot;background: url(&amp;#34;/images/link-icon.png&amp;#34;) right center no-repeat rgb(255 , 255 , 255) ; color: rgb(49 , 49 , 49) ; padding-right: 22px ; padding-bottom: 2px ; font-weight: 400 ; font-family: &amp;#34;arial&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;tahoma&amp;#34; ; font-size: 16px&quot;&gt;Buttons&lt;/a&gt;" style="html=1;fillColor=none;strokeColor=none;fontSize=12;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="520" y="640" width="147.75" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
