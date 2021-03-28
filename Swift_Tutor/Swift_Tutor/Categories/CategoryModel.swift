@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+// MARK: CategoryModel
+
+public class CategoryModel : ItemModel {
+
+    override init(name : String, image : String) {
+        super.init(name: name, image: image)
+    }
+}

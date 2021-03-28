@@ -1,5 +1,5 @@
 //
-//  TopicsViewController.swift
+//  ComptTopicsViewController.swift
 //  Swift_Tutor
 //
 //  Created by Duong Cuong on 3/23/21.
@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+import UIKit
+
+class ComptTopicsViewController: UIViewController {
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.title = "Topics"
+    }
+}

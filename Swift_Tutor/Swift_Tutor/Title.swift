@@ -7,3 +7,27 @@
 //
 
 import Foundation
+
+
+public class Title {
+    
+    public class Category {
+        public static var component = "Component"
+    }
+    
+    public class Component {
+        public static var button = "Button"
+    }
+    
+    public class uiFramework {
+        public static var uiKit = "uiKit"
+        public static var swiftUI = "swiftUI"
+    }
+    
+    public class Tutorial {
+        public static var documentation = "Documetation"
+        public static var topic = "Topic"
+        public static var example = "Example"
+    }
+
+}

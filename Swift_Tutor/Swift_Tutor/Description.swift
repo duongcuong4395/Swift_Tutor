@@ -7,3 +7,46 @@
 //
 
 import Foundation
+
+
+/* App Structure
+ "Swift_Tutorial":
+ [
+     {
+         "category": {
+             "name":"components"
+             , "image":""
+             , "components": [
+                 {
+                     "name":"button"
+                     , "image":""
+                     , "uiFramework": {
+                         "uiKit":{
+                             "documentation": {
+                                "link":""
+                             }
+                             , "examples": {
+                                "link":""
+                             }
+                             , "cheats": {
+                                "link":""
+                             }
+                         }
+                         , "swiftUi": {
+                             "documentation": {
+                                "link":""
+                             }
+                             , "examples": {
+                                "link":""
+                             }
+                             , "cheats": {
+                                "link":""
+                             }
+                         }
+                     }
+                 }
+             ]
+         }
+     }
+ ]
+ */

@@ -7,3 +7,26 @@
 //
 
 import Foundation
+
+
+public class Image {
+    
+    public class Category {
+        public static var component = "component"
+    }
+    
+    public class Component {
+        public static var button = "button"
+    }
+    
+    public class UiFramework {
+        public static var uiKit = "uiKit"
+        public static var swiftUI = "swiftUI"
+    }
+    
+    public class Tutorial {
+        public static var documentation = "documentation"
+        public static var topic = "topic"
+        public static var example = "example"
+    }
+}

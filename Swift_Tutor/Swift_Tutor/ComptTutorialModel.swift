@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+
+// MARK: ComptTutorialModel
+
+public class ComptTutorialModel : ItemModel {
+
+    public var componentName : String?
+    
+    override init(name : String, image : String) {
+        super.init(name: name, image: image)
+    }
+}

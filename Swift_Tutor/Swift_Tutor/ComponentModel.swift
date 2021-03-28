@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+public class UIFwModel {
+    public var docsLink : String?
+    public var exampleLink : String?
+}
+
+public class ComponentModel: ItemModel {
+  
+    public var comUiKit = UIFwModel()
+    public var comSwiftUi = UIFwModel()
+    
+    override init(name : String, image : String) {
+        super.init(name: name, image: image)
+        
+    }
+}
+
+

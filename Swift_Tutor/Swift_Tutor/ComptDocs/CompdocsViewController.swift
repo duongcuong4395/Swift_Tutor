@@ -7,3 +7,33 @@
 //
 
 import Foundation
+
+import UIKit
+import WebKit
+
+class CompdocsViewController: UIViewController, WKUIDelegate {
+    
+    var webView = WKWebView()
+    
+    override func loadView() {
+        let webConfig = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfig)
+        webView.uiDelegate = self
+        view = webView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.title = "Documentation"
+        
+        let url = URL(string: "https://developer.apple.com/documentation/uikit/uibutton")
+        let request = URLRequest(url: url!)
+        webView.load(request)
+        
+        //webView.loadHTMLString("https://developer.apple.com/documentation/uikit/uibutton", baseURL: nil)
+    }
+}
+
+
+

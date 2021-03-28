@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+import UIKit
+
+class ItemsViewModel<T> {
+   
+    var listModel: [T] = { return [] }()
+
+    weak var dataSource : GenericDataSource<T>?
+
+    init(dataSource : GenericDataSource<T>?) {
+        self.dataSource = dataSource
+    }
+    
+    
+}

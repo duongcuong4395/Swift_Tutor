@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+
+public class UIFrameworkModel : ItemModel {
+  
+    public var selected : Bool?
+    
+    override init(name : String, image : String) {
+        super.init(name: name, image: image)
+        
+        self.selected = false
+    }
+}
