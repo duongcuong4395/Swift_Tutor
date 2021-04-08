@@ -13,7 +13,7 @@ public class UIFwModel {
     public var exampleLink : String?
 }
 
-public class ComponentModel: ItemModel {
+public class UIElementModel: ItemModel {
   
     public var comUiKit = UIFwModel()
     public var comSwiftUi = UIFwModel()

@@ -13,7 +13,7 @@ import UIKit
 import SnapKit
 
 
-class ComponentsViewController: UIViewController {
+class UIElementsViewController: UIViewController {
     
     let componentTableView = ComponentTableView()
     
@@ -42,7 +42,7 @@ class ComponentsViewController: UIViewController {
     func setup_componentTableView() {
         setup_Constrains_setup_componentTableView()
         
-        self.componentViewModel.fetchCategory()
+        self.componentViewModel.fetchComponent()
         
         componentTableView.dataSource = self.dataSource
         componentTableView.delegate = self
@@ -52,7 +52,7 @@ class ComponentsViewController: UIViewController {
             
             if self!.dataSource.data.value.count > 0 {
                 for wc in self!.dataSource.data.value {
-                    print(wc.name as Any)
+                    print("List Components", wc.name as Any)
                 }
                 
             }
@@ -72,12 +72,11 @@ class ComponentsViewController: UIViewController {
 
 
 
-extension ComponentsViewController : UITableViewDelegate {
+extension UIElementsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let component = self.componentViewModel.dataSource?.data.value[indexPath.row]
-        print("Component name selected ", component!.name as Any)
-        print("Component image selected ", component!.image as Any)
+        print("Component selected ", component!.name as Any)
         
         let navigationController = UINavigationController(rootViewController: ComptTutorialViewController())
         self.present(navigationController, animated: true, completion: nil)

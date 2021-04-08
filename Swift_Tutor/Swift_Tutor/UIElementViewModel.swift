@@ -11,22 +11,28 @@ import Foundation
 
 import UIKit
 
-class ComponentViewModel: ItemsViewModel<ComponentModel> {
+class UIElementViewModel: ItemsViewModel<UIElementModel> {
    
-    let buttonModel = ComponentModel(name: Title.Component.button, image: Image.Component.button)
+    let buttonModel = UIElementModel(name: Title.Component.button, image: Image.Component.button)
+    let labelModel = UIElementModel(name: Title.Component.label, image: Image.Component.label)
+    let textFieldModel = UIElementModel(name: Title.Component.textField, image: Image.Component.textField)
+    let toolBarModel = UIElementModel(name: Title.Component.toolBar, image: Image.Component.toolBar)
 
-    override init(dataSource : GenericDataSource<ComponentModel>?) {
+    override init(dataSource : GenericDataSource<UIElementModel>?) {
         super.init(dataSource: dataSource)
         self.listModel.append(buttonModel)
+        self.listModel.append(labelModel)
+        self.listModel.append(textFieldModel)
+        self.listModel.append(toolBarModel)
     }
 
-    func fetchCategory() {
+    func fetchComponent() {
         self.dataSource?.data.value = self.listModel
     }
 }
 
 
-class ListComponentDataSource : GenericDataSource<ComponentModel>, UITableViewDataSource {
+class UIElementDataSource : GenericDataSource<UIElementModel>, UITableViewDataSource {
     /*
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
@@ -62,7 +68,7 @@ class ListComponentDataSource : GenericDataSource<ComponentModel>, UITableViewDa
     }
 }
 
-extension ListComponentDataSource : UITableViewDelegate {
+extension UIElementDataSource : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let component = self.data.value[indexPath.row]
