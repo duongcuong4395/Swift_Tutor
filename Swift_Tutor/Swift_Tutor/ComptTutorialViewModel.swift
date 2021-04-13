@@ -14,10 +14,14 @@ import UIKit
 
 class ComptTutorialViewModel: ItemsViewModel<ComptTutorialModel> {
     
-    let documentationModel = ComptTutorialModel(name: Title.Tutorial.documentation, image: Image.Tutorial.documentation)
+    let documentationModel = ComptTutorialModel(name: Title.Tutorial.documentation, image: Image.Tutorial.documentation, links: [""])
     //let topicModel = ComptTutorialModel(name: Title.Tutorial.topic, image: Image.Tutorial.topic)
-    let exampleModel = ComptTutorialModel(name: Title.Tutorial.example, image: Image.Tutorial.example)
+    let exampleModel = ComptTutorialModel(name: Title.Tutorial.example, image: Image.Tutorial.example, links: [""])
 
+    var compSelected = ItemModel(name: "", image: "", links: [""])
+    var exampleController = UIViewController()
+    
+    
     override init(dataSource : GenericDataSource<ComptTutorialModel>?) {
         super.init(dataSource: dataSource)
         self.listModel.append(documentationModel)

@@ -8,18 +8,18 @@
 
 import Foundation
 
-public class UIFwModel {
+class UIFwModel {
     public var docsLink : String?
     public var exampleLink : String?
 }
 
-public class UIElementModel: ItemModel {
+class UIElementModel: ItemModel {
   
     public var comUiKit = UIFwModel()
     public var comSwiftUi = UIFwModel()
     
-    override init(name : String, image : String) {
-        super.init(name: name, image: image)
+    override init(name : String, image : String, links : [String]) {
+        super.init(name: name, image: image, links: links)
         
     }
 }

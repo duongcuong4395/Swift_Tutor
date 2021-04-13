@@ -27,13 +27,17 @@ class ComptTutorialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Comp_Button_Tutor"
+        title = comptTutorialViewModel.compSelected.name
         self.view.backgroundColor = .white
         
         setup_View()
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
     
     func setup_View() {
         setup_Constrains_uiFrameworkView()
@@ -79,7 +83,7 @@ class ComptTutorialViewController: UIViewController {
             
             if self!.dataSource.data.value.count > 0 {
                 for wc in self!.dataSource.data.value {
-                    print(wc.name as Any)
+                    print("List component tutorial", wc.name as Any)
                 }
                 
             }
@@ -92,16 +96,15 @@ extension ComptTutorialViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let compTutor = self.comptTutorialViewModel.dataSource?.data.value[indexPath.row]
-        print("compTutor name selected ", compTutor!.name as Any)
-        print("compTutor image selected ", compTutor!.image as Any)
+        print("compTutor selected ", compTutor!.name as Any)
         
         switch compTutor!.name {
             case Title.Tutorial.documentation:
                 let vc = CompdocsViewController()
+                vc.compdocsViewModel.updateLinks(link: comptTutorialViewModel.compSelected.links?[0] ?? "")
                 self.navigationController!.pushViewController(vc, animated: true)
             case Title.Tutorial.example:
-                let vc = ComptExampleViewController()
-                self.navigationController!.pushViewController(vc, animated: true)
+                self.navigationController!.pushViewController(comptTutorialViewModel.exampleController, animated: true)
             case Title.Tutorial.topic:
                 let vc = ComptTopicsViewController()
                 self.navigationController!.pushViewController(vc, animated: true)

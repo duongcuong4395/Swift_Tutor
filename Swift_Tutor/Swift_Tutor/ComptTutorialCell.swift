@@ -15,7 +15,7 @@ import SnapKit
 class ComptTutorialTableViewCell: ItemCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: Table.IdCell.component)
+        super.init(style: style, reuseIdentifier: Table.IdCell.uiElement)
         setup_Cell()
     }
     

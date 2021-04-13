@@ -12,10 +12,10 @@ import Foundation
 import UIKit
 import SnapKit
 
-class ComponentTableViewCell: ItemCell {
+class UIElementCell : ItemCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: Table.IdCell.component)
+        super.init(style: style, reuseIdentifier: Table.IdCell.uiElement)
         setup_Cell()
     }
     

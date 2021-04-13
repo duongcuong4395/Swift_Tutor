@@ -13,11 +13,14 @@ import UIKit
 
 class CategoryViewModel: ItemsViewModel<CategoryModel> {
     
-    let component = CategoryModel(name: Title.Category.component, image: Image.Category.component)
+    let component = CategoryModel(name: Title.Category.uiElement, image: Image.Category.uiElement, links: [""])
+    let iosFrameworksModel = CategoryModel(name: Title.Category.iosFrameworks, image: Image.Category.iosFrameworks, links: [""])
 
     override init(dataSource : GenericDataSource<CategoryModel>?) {
         super.init(dataSource: dataSource)
+        
         self.listModel.append(component)
+        self.listModel.append(iosFrameworksModel)
     }
 
     func fetchCategory() {

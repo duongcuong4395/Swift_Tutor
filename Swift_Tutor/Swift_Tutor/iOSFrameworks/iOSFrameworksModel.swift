@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+
+// MARK: CategoryModel
+
+class IOSFrameworksModel : ItemModel {
+
+    override init(name : String, image : String, links: [String]) {
+        super.init(name: name, image: image, links: links)
+    }
+}

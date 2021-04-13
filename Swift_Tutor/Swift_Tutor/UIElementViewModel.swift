@@ -13,10 +13,11 @@ import UIKit
 
 class UIElementViewModel: ItemsViewModel<UIElementModel> {
    
-    let buttonModel = UIElementModel(name: Title.Component.button, image: Image.Component.button)
-    let labelModel = UIElementModel(name: Title.Component.label, image: Image.Component.label)
-    let textFieldModel = UIElementModel(name: Title.Component.textField, image: Image.Component.textField)
-    let toolBarModel = UIElementModel(name: Title.Component.toolBar, image: Image.Component.toolBar)
+    let buttonModel = UIElementModel(name: Title.UIElement.button, image: Image.UIElement.button, links: ["https://developer.apple.com/documentation/uikit/uibutton"])
+    let labelModel = UIElementModel(name: Title.UIElement.label, image: Image.UIElement.label, links: ["https://developer.apple.com/documentation/uikit/uilabel"])
+    let textFieldModel = UIElementModel(name: Title.UIElement.textField, image: Image.UIElement.textField, links: ["https://developer.apple.com/documentation/uikit/uitextfield"])
+    let toolBarModel = UIElementModel(name: Title.UIElement.toolBar, image: Image.UIElement.toolBar, links: ["https://developer.apple.com/documentation/uikit/uitoolbar"])
+    let tabBarModel = UIElementModel(name: Title.UIElement.tabBar, image: Image.UIElement.tabBar, links: ["https://developer.apple.com/documentation/uikit/uitabbar"])
 
     override init(dataSource : GenericDataSource<UIElementModel>?) {
         super.init(dataSource: dataSource)
@@ -24,6 +25,7 @@ class UIElementViewModel: ItemsViewModel<UIElementModel> {
         self.listModel.append(labelModel)
         self.listModel.append(textFieldModel)
         self.listModel.append(toolBarModel)
+        self.listModel.append(tabBarModel)
     }
 
     func fetchComponent() {
@@ -47,7 +49,7 @@ class UIElementDataSource : GenericDataSource<UIElementModel>, UITableViewDataSo
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Table.IdCell.component, for: indexPath) as! ComponentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Table.IdCell.uiElement, for: indexPath) as! UIElementCell
 
         let component = self.data.value[indexPath.row]
         cell.nameLabel.text = component.name
@@ -68,11 +70,3 @@ class UIElementDataSource : GenericDataSource<UIElementModel>, UITableViewDataSo
     }
 }
 
-extension UIElementDataSource : UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let component = self.data.value[indexPath.row]
-        print("Component name selected ", component.name as Any)
-        print("Component image selected ", component.image as Any)
-    }
-}

@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+import UIKit
+
+class Themes {
+    static var backgroundCorlor = UIColor.white
+}

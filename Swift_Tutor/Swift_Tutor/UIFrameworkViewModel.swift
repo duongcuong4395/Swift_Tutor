@@ -12,8 +12,8 @@ import UIKit
 
 class UIFrameworkViewModel {
    
-    let uiKitModel = UIFrameworkModel(name: Title.uiFramework.uiKit, image: Image.UiFramework.uiKit)
-    let swiftUIModel = UIFrameworkModel(name: Title.uiFramework.swiftUI, image: Image.UiFramework.swiftUI)
+    let uiKitModel = UIFrameworkModel(name: Title.uiFramework.uiKit, image: Image.UiFramework.uiKit, links: [""])
+    let swiftUIModel = UIFrameworkModel(name: Title.uiFramework.swiftUI, image: Image.UiFramework.swiftUI, links: [""])
 
     var listModel: [UIFrameworkModel] = { return [] }()
     var dataSource : DynamicValue<[UIFrameworkModel]>

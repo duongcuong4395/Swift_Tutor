@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+
+import UIKit
+
+class CoreDataViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = Themes.backgroundCorlor
+        self.title = Title.iosFrameworks.coreData
+        
+    }
+}

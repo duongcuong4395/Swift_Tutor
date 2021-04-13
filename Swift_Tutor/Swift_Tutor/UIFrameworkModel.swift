@@ -9,12 +9,12 @@
 import Foundation
 
 
-public class UIFrameworkModel : ItemModel {
+class UIFrameworkModel : ItemModel {
   
-    public var selected : Bool?
+    var selected : Bool?
     
-    override init(name : String, image : String) {
-        super.init(name: name, image: image)
+    override init(name : String, image : String, links : [String]) {
+        super.init(name: name, image: image, links: links)
         
         self.selected = false
     }

@@ -7,3 +7,32 @@
 //
 
 import Foundation
+
+
+import SnapKit
+import UIKit
+
+class ButtonDemoController: UIViewController {
+    
+    var buttonDemoView = ButtonDemoView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setup_Views()
+    }
+    
+    func setup_Views() {
+        
+        // setup for buttonDemoView
+        setup_buttonDemoView()
+    }
+    
+    func setup_buttonDemoView() {
+        self.view.addSubview(buttonDemoView)
+        
+        buttonDemoView.snp.makeConstraints({ (make) in
+            make.top.leading.trailing.bottom.equalTo(self.view)
+        })
+    }
+}

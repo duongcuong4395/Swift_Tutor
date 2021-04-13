@@ -15,17 +15,19 @@ import SnapKit
 
 class UIElementsViewController: UIViewController {
     
-    let componentTableView = ComponentTableView()
+    let uiElementTableView = UIElementTableView()
     
-    let dataSource = ListComponentDataSource()
-    lazy var componentViewModel : ComponentViewModel = {
-        let componentViewModel = ComponentViewModel(dataSource: dataSource)
-        return componentViewModel
+    let dataSource = UIElementDataSource()
+    lazy var uiElementViewModel : UIElementViewModel = {
+        let uiElementViewModel = UIElementViewModel(dataSource: dataSource)
+        return uiElementViewModel
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Components"
+        
+        self.view.backgroundColor = Themes.backgroundCorlor
+        self.title = Title.Category.uiElement
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,13 +44,13 @@ class UIElementsViewController: UIViewController {
     func setup_componentTableView() {
         setup_Constrains_setup_componentTableView()
         
-        self.componentViewModel.fetchComponent()
+        self.uiElementViewModel.fetchComponent()
         
-        componentTableView.dataSource = self.dataSource
-        componentTableView.delegate = self
+        uiElementTableView.dataSource = self.dataSource
+        uiElementTableView.delegate = self
         
-        componentViewModel.dataSource?.data.addAndNotify(observer: self, completionHandler: { [weak self] in
-            self?.componentTableView.reloadData()
+        uiElementViewModel.dataSource?.data.addAndNotify(observer: self, completionHandler: { [weak self] in
+            self?.uiElementTableView.reloadData()
             
             if self!.dataSource.data.value.count > 0 {
                 for wc in self!.dataSource.data.value {
@@ -61,9 +63,9 @@ class UIElementsViewController: UIViewController {
     
     // MARK: Constrains
     func setup_Constrains_setup_componentTableView() {
-        view.addSubview(componentTableView)
+        view.addSubview(uiElementTableView)
         
-        componentTableView.snp.makeConstraints { (make) in
+        uiElementTableView.snp.makeConstraints { (make) in
             make.top.leading.trailing.bottom.equalTo(self.view)
         }
     }
@@ -75,10 +77,30 @@ class UIElementsViewController: UIViewController {
 extension UIElementsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let component = self.componentViewModel.dataSource?.data.value[indexPath.row]
+        let component = self.uiElementViewModel.dataSource?.data.value[indexPath.row]
         print("Component selected ", component!.name as Any)
         
-        let navigationController = UINavigationController(rootViewController: ComptTutorialViewController())
+        let comptTutorialViewController = ComptTutorialViewController()
+        comptTutorialViewController.comptTutorialViewModel.compSelected = component!
+        
+        switch component?.name {
+        case Title.UIElement.button:
+            comptTutorialViewController.comptTutorialViewModel.exampleController = ButtonDemoController()
+        case Title.UIElement.toolBar:
+            comptTutorialViewController.comptTutorialViewModel.exampleController = ToolBarViewController()
+        case Title.UIElement.textField:
+            comptTutorialViewController.comptTutorialViewModel.exampleController = TextFieldDemoController()
+        case Title.UIElement.tabBar:
+            comptTutorialViewController.comptTutorialViewModel.exampleController = TabBarController()
+        case Title.UIElement.label:
+            comptTutorialViewController.comptTutorialViewModel.exampleController = LabelDemoController()
+        default:
+            comptTutorialViewController.comptTutorialViewModel.exampleController = ButtonDemoController()
+        }
+        
+        
+        let navigationController = UINavigationController(rootViewController: comptTutorialViewController)
+        
         self.present(navigationController, animated: true, completion: nil)
     }
 }
