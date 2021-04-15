@@ -13,7 +13,7 @@ import Foundation
 import UIKit
 
 
-class ComponentTableView: UITableView {
+class UIElementTableView: UITableView {
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: CGRect.zero, style: .grouped)
@@ -22,7 +22,7 @@ class ComponentTableView: UITableView {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         // Register cell with Id: id_Cell_Category
-        self.register(ComponentTableViewCell.self, forCellReuseIdentifier: Table.IdCell.component)
+        self.register(UIElementCell.self, forCellReuseIdentifier: Table.IdCell.uiElement)
     }
     
     required init?(coder: NSCoder) {

@@ -14,7 +14,7 @@ class UIFrameworkView : UIView {
     
     
     
-    public var titleLabel: UILabel = {
+    var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.textAlignment = .center

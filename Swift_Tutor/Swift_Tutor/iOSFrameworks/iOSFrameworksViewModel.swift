@@ -1,43 +1,39 @@
 //
-//  CategoryViewModel.swift
+//  iOSFrameworksViewModel.swift
 //  Swift_Tutor
 //
-//  Created by Duong Cuong on 3/18/21.
+//  Created by Duong Cuong on 4/6/21.
 //  Copyright © 2021 Duong Cuong. All rights reserved.
 //
 
 import Foundation
 
-
 import UIKit
 
-class CategoryViewModel: ItemsViewModel<CategoryModel> {
+class IOSFrameworksViewModel: ItemsViewModel<IOSFrameworksModel> {
     
-    let component = CategoryModel(name: Title.Category.uiElement, image: Image.Category.uiElement, links: [""])
-    let iosFrameworksModel = CategoryModel(name: Title.Category.iosFrameworks, image: Image.Category.iosFrameworks, links: [""])
+    let coreAnimationModel = IOSFrameworksModel(name: Title.iosFrameworks.coreAnimation, image: Image.iosFrameworks.coreAnimation, links: [""])
+    let coreDataModel = IOSFrameworksModel(name: Title.iosFrameworks.coreData, image: Image.iosFrameworks.coreData, links: [""])
 
-    override init(dataSource : GenericDataSource<CategoryModel>?) {
+    override init(dataSource : GenericDataSource<IOSFrameworksModel>?) {
         super.init(dataSource: dataSource)
         
-        self.listModel.append(component)
-        self.listModel.append(iosFrameworksModel)
+        self.listModel.append(coreAnimationModel)
+        self.listModel.append(coreDataModel)
     }
 
-    func fetchCategory() {
-        
+    func fetchData() {
         self.dataSource?.data.value = self.listModel
     }
 }
 
 
-class ListCategoryDataSource : GenericDataSource<CategoryModel>, UITableViewDataSource {
-    
+class IOSFrameworksDataSource : GenericDataSource<IOSFrameworksModel>, UITableViewDataSource {
     /*
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
     */
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -47,11 +43,11 @@ class ListCategoryDataSource : GenericDataSource<CategoryModel>, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Table.IdCell.category, for: indexPath) as! CategoryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Table.IdCell.iOSFrameworks, for: indexPath) as! IOSFrameworksCell
 
-        let category = self.data.value[indexPath.row]
-        cell.nameLabel.text = category.name
-        cell.imageUIImage.image = UIImage(named: category.image!)
+        let component = self.data.value[indexPath.row]
+        cell.nameLabel.text = component.name
+        cell.imageUIImage.image = UIImage(named: component.image!)
         return cell
     }
     

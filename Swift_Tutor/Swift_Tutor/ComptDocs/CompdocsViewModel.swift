@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+
+
+import UIKit
+
+class CompdocsViewModel {
+    let compdocsModel = CompdocsModel(docsLink: "")
+    
+    var dataSource : DynamicValue<CompdocsModel>
+    
+    init() {
+        self.dataSource = DynamicValue<CompdocsModel>(compdocsModel)
+    }
+    
+    func updateLinks(link: String) {
+        self.dataSource.value.docsLink = link
+    }
+}

@@ -11,18 +11,19 @@ import Foundation
 import UIKit
 import SnapKit
 
-public class Table {
-    public class IdCell {
+class Table {
+    class IdCell {
         public static var category = "id_TableCell_Category"
-        public static var component = "id_TableCell_Component"
+        public static var uiElement = "id_TableCell_UIElement"
         public static var compTutorial = "id_TableCell_CompTutorial"
-        
+        public static var iOSFrameworks = "id_TableCell_IOSFrameworks"
     }
     
-    public class Id {
+    class Id {
         public static var category = "id_Table_Category"
-        public static var component = "id_Table_Component"
+        public static var uiElement = "id_Table_UIElement"
         public static var compTutorial = "id_Table_CompTutorial"
+        public static var iOSFrameworks = "id_Table_IOSFrameworks"
     }
 
 }
@@ -30,21 +31,21 @@ public class Table {
 
 
 
-public class ItemCell: UITableViewCell {
+class ItemCell: UITableViewCell {
     
-    public var imageUIImage: UIImageView = {
+    var imageUIImage: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleToFill
         return image
     }()
     
-    public var nameLabel: UILabel = {
+    var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
         return label
     }()
     
-    public func setup_Cell() {
+    func setup_Cell() {
         setup_Constraints_ImageUIImage()
         setup_Constraints_NameLabel()
         
@@ -52,7 +53,7 @@ public class ItemCell: UITableViewCell {
     
     // MARK: Constrains
     
-    public func setup_Constraints_NameLabel() {
+    func setup_Constraints_NameLabel() {
         contentView.addSubview(nameLabel)
         
         nameLabel.snp.makeConstraints { (make) in
@@ -62,7 +63,7 @@ public class ItemCell: UITableViewCell {
         }
     }
     
-    public func setup_Constraints_ImageUIImage() {
+    func setup_Constraints_ImageUIImage() {
         contentView.addSubview(imageUIImage)
         
         imageUIImage.snp.makeConstraints { (make) in
@@ -76,21 +77,21 @@ public class ItemCell: UITableViewCell {
 
 
 
-public class HorizontalItemView: UIView {
+class HorizontalItemView: UIView {
     
-    public var imageUIImage: UIImageView = {
+    var imageUIImage: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleToFill
         return image
     }()
     
-    public var nameLabel: UILabel = {
+    var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
         return label
     }()
     
-    public override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         
         setup_Cell()
@@ -100,7 +101,7 @@ public class HorizontalItemView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func setup_Cell() {
+    func setup_Cell() {
         setup_Constraints_ImageUIImage()
         setup_Constraints_NameLabel()
         
@@ -108,7 +109,7 @@ public class HorizontalItemView: UIView {
     
     // MARK: Constrains
     
-    public func setup_Constraints_NameLabel() {
+    func setup_Constraints_NameLabel() {
         self.addSubview(nameLabel)
         
         nameLabel.snp.makeConstraints { (make) in
@@ -118,7 +119,7 @@ public class HorizontalItemView: UIView {
         }
     }
     
-    public func setup_Constraints_ImageUIImage() {
+    func setup_Constraints_ImageUIImage() {
         self.addSubview(imageUIImage)
         
         imageUIImage.snp.makeConstraints { (make) in
@@ -132,22 +133,22 @@ public class HorizontalItemView: UIView {
 
 
 
-public class VerticalItemView: UIView {
+class VerticalItemView: UIView {
     
-    public var imageUIImage: UIImageView = {
+    var imageUIImage: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleToFill
         return image
     }()
     
-    public var nameLabel: UILabel = {
+    var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.textAlignment = .center
         return label
     }()
     
-    public override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         
         setup_Cell()
@@ -157,14 +158,14 @@ public class VerticalItemView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func setup_Cell() {
+    func setup_Cell() {
         setup_Constraints_NameLabel()
         setup_Constraints_ImageUIImage()
     }
     
     // MARK: Constrains
     
-    public func setup_Constraints_NameLabel() {
+    func setup_Constraints_NameLabel() {
         self.addSubview(nameLabel)
         
         nameLabel.snp.makeConstraints { (make) in
@@ -175,7 +176,7 @@ public class VerticalItemView: UIView {
         }
     }
     
-    public func setup_Constraints_ImageUIImage() {
+    func setup_Constraints_ImageUIImage() {
         self.addSubview(imageUIImage)
         
         imageUIImage.snp.makeConstraints { (make) in

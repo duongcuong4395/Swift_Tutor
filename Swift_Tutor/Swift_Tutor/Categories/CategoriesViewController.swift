@@ -49,7 +49,7 @@ class CategoriesViewController: UIViewController {
             
             if self!.dataSource.data.value.count > 0 {
                 for wc in self!.dataSource.data.value {
-                    print(wc.name as Any)
+                    print("List Categories", wc.name as Any)
                 }
                 
             }
@@ -92,10 +92,20 @@ extension CategoriesViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = self.categoryViewModel.dataSource?.data.value[indexPath.row]
-        print("category name selected ", category!.name as Any)
-        print("category image selected ", category!.image as Any)
+        print("category selected ", category!.name as Any)
         
-        let vc = ComponentsViewController()
+        
+        var vc = UIViewController()
+        
+        switch category?.name {
+        case Title.Category.uiElement:
+            vc = UIElementsViewController()
+        case Title.Category.iosFrameworks:
+            vc = iOSFrameworksViewController()
+        default:
+            vc = UIElementsViewController()
+        }
+        
         self.navigationController!.pushViewController(vc, animated: true)
     }
 }

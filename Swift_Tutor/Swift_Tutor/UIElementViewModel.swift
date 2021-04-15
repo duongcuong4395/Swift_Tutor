@@ -11,22 +11,30 @@ import Foundation
 
 import UIKit
 
-class ComponentViewModel: ItemsViewModel<ComponentModel> {
+class UIElementViewModel: ItemsViewModel<UIElementModel> {
    
-    let buttonModel = ComponentModel(name: Title.Component.button, image: Image.Component.button)
+    let buttonModel = UIElementModel(name: Title.UIElement.button, image: Image.UIElement.button, links: ["https://developer.apple.com/documentation/uikit/uibutton"])
+    let labelModel = UIElementModel(name: Title.UIElement.label, image: Image.UIElement.label, links: ["https://developer.apple.com/documentation/uikit/uilabel"])
+    let textFieldModel = UIElementModel(name: Title.UIElement.textField, image: Image.UIElement.textField, links: ["https://developer.apple.com/documentation/uikit/uitextfield"])
+    let toolBarModel = UIElementModel(name: Title.UIElement.toolBar, image: Image.UIElement.toolBar, links: ["https://developer.apple.com/documentation/uikit/uitoolbar"])
+    let tabBarModel = UIElementModel(name: Title.UIElement.tabBar, image: Image.UIElement.tabBar, links: ["https://developer.apple.com/documentation/uikit/uitabbar"])
 
-    override init(dataSource : GenericDataSource<ComponentModel>?) {
+    override init(dataSource : GenericDataSource<UIElementModel>?) {
         super.init(dataSource: dataSource)
         self.listModel.append(buttonModel)
+        self.listModel.append(labelModel)
+        self.listModel.append(textFieldModel)
+        self.listModel.append(toolBarModel)
+        self.listModel.append(tabBarModel)
     }
 
-    func fetchCategory() {
+    func fetchComponent() {
         self.dataSource?.data.value = self.listModel
     }
 }
 
 
-class ListComponentDataSource : GenericDataSource<ComponentModel>, UITableViewDataSource {
+class UIElementDataSource : GenericDataSource<UIElementModel>, UITableViewDataSource {
     /*
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
@@ -41,7 +49,7 @@ class ListComponentDataSource : GenericDataSource<ComponentModel>, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Table.IdCell.component, for: indexPath) as! ComponentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Table.IdCell.uiElement, for: indexPath) as! UIElementCell
 
         let component = self.data.value[indexPath.row]
         cell.nameLabel.text = component.name
@@ -62,11 +70,3 @@ class ListComponentDataSource : GenericDataSource<ComponentModel>, UITableViewDa
     }
 }
 
-extension ListComponentDataSource : UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let component = self.data.value[indexPath.row]
-        print("Component name selected ", component.name as Any)
-        print("Component image selected ", component.image as Any)
-    }
-}

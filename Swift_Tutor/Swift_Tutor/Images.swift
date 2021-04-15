@@ -9,22 +9,32 @@
 import Foundation
 
 
-public class Image {
+class Image {
     
-    public class Category {
-        public static var component = "component"
+    class Category {
+        public static var uiElement = "uiElement"
+        public static var iosFrameworks = "iosFrameworks"
     }
     
-    public class Component {
+    class UIElement {
         public static var button = "button"
+        public static var label = "label"
+        public static var textField = "textField"
+        public static var toolBar = "toolBar"
+        public static var tabBar = "tabBar"
     }
     
-    public class UiFramework {
+    class UiFramework {
         public static var uiKit = "uiKit"
         public static var swiftUI = "swiftUI"
     }
     
-    public class Tutorial {
+    class iosFrameworks {
+        public static var coreAnimation = "coreAnimation"
+        public static var coreData = "coreData"
+    }
+    
+    class Tutorial {
         public static var documentation = "documentation"
         public static var topic = "topic"
         public static var example = "example"

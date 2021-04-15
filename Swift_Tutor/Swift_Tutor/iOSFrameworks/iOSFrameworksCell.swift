@@ -1,8 +1,8 @@
 //
-//  ComponentCell.swift
+//  iOSFrameworksCell.swift
 //  Swift_Tutor
 //
-//  Created by Duong Cuong on 3/20/21.
+//  Created by Duong Cuong on 4/6/21.
 //  Copyright © 2021 Duong Cuong. All rights reserved.
 //
 
@@ -12,10 +12,10 @@ import Foundation
 import UIKit
 import SnapKit
 
-class ComponentTableViewCell: ItemCell {
-
+class IOSFrameworksCell: ItemCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: Table.IdCell.component)
+        super.init(style: style, reuseIdentifier: Table.IdCell.iOSFrameworks)
+        
         setup_Cell()
     }
     
