@@ -20,7 +20,6 @@ class iOSFrameworksViewController: UIViewController {
         return iosFrameworksViewModel
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,15 +30,15 @@ class iOSFrameworksViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setup_Views()
+        setupViews()
     }
     
-    func setup_Views() {
-        setup_iosFrameworksTableView()
+    private func setupViews() {
+        setupIOSFrameworksTableView()
     }
     
-    func setup_iosFrameworksTableView() {
-        setup_Constrains_iosFrameworksTableView()
+    private func setupIOSFrameworksTableView() {
+        setupConstrainsIOSFrameworksTableView()
         
         self.iosFrameworksViewModel.fetchData()
         
@@ -58,7 +57,7 @@ class iOSFrameworksViewController: UIViewController {
         })
     }
     
-    func setup_Constrains_iosFrameworksTableView() {
+    private func setupConstrainsIOSFrameworksTableView() {
         view.addSubview(iosFrameworksTableView)
         
         iosFrameworksTableView.snp.makeConstraints { (make) in
@@ -72,41 +71,22 @@ class iOSFrameworksViewController: UIViewController {
 extension iOSFrameworksViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let iosFWSelected = self.iosFrameworksViewModel.dataSource?.data.value[indexPath.row]
-        print("ios Frameworks selected ", iosFWSelected!.name as Any)
-        
-        /*
-        var vc = UIViewController()
-        
-        switch iosFWSelected?.name {
-        case Title.iosFrameworks.coreAnimation:
-            vc = CoreAnimationViewController()
-        case Title.iosFrameworks.coreData:
-            vc = CoreDataViewController()
-        default:
-            vc = CoreAnimationViewController()
+        if let iosFWSelected = self.iosFrameworksViewModel.dataSource?.data.value[indexPath.row] {
+            let comptTutorialViewController: Any
+            
+            switch iosFWSelected.name {
+            case Title.IOSFrameworks.coreData:
+                comptTutorialViewController = ComptTutorialViewController(nameFillter: "", compSelected: iosFWSelected, exampleController: CoreDataViewController())
+            case Title.IOSFrameworks.coreAnimation:
+                comptTutorialViewController = ComptTutorialViewController(nameFillter: "", compSelected: iosFWSelected, exampleController: CoreAnimationViewController())
+            default:
+                comptTutorialViewController = ComptTutorialViewController(nameFillter: "", compSelected: iosFWSelected, exampleController: CoreDataViewController())
+            }
+            
+            let navigationController = UINavigationController(rootViewController: comptTutorialViewController as! UIViewController)
+            
+            self.present(navigationController, animated: true, completion: nil)
         }
-        
-        self.navigationController!.pushViewController(vc, animated: true)
-        */
-        
-        
-        let comptTutorialViewController = ComptTutorialViewController()
-        comptTutorialViewController.comptTutorialViewModel.compSelected = iosFWSelected!
-        
-        switch iosFWSelected?.name {
-        case Title.iosFrameworks.coreData:
-            comptTutorialViewController.comptTutorialViewModel.exampleController = CoreDataViewController()
-        case Title.iosFrameworks.coreAnimation:
-            comptTutorialViewController.comptTutorialViewModel.exampleController = CoreAnimationViewController()
-        default:
-            comptTutorialViewController.comptTutorialViewModel.exampleController = CoreDataViewController()
-        }
-        
-        
-        let navigationController = UINavigationController(rootViewController: comptTutorialViewController)
-        
-        self.present(navigationController, animated: true, completion: nil)
         
     }
 }

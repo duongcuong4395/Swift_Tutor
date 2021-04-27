@@ -28,19 +28,19 @@ class LabelDemoView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setup_Label()
+        setupLabel()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup_Label() {
-        setup_Constrains_Label()
+    private func setupLabel() {
+        setupConstrainsLabel()
         
     }
     
-    func setup_Constrains_Label() {
+    private func setupConstrainsLabel() {
         self.addSubview(label)
         
         label.snp.makeConstraints { (make) in
@@ -49,7 +49,7 @@ class LabelDemoView: UIView {
         }
     }
     
-    func setup_Properties_Label()  {
+    private func setupPropertiesLabel()  {
         label.text = "This is label"
         label.textAlignment = .center
         label.numberOfLines = 0

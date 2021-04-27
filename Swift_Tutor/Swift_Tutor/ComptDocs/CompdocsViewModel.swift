@@ -18,6 +18,8 @@ class CompdocsViewModel {
     var dataSource : DynamicValue<CompdocsModel>
     
     init() {
+        
+        
         self.dataSource = DynamicValue<CompdocsModel>(compdocsModel)
     }
     

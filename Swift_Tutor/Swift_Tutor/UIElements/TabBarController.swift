@@ -27,10 +27,6 @@ class TabBarController:  UITabBarController, UITabBarControllerDelegate {
         
         self.delegate = self
         
-        // homeViewController = HomeViewController()
-        // secondViewController = SecondViewController()
-        // actionViewController = ActionViewController()
-        
         setupTabBar()
     }
     
@@ -52,14 +48,7 @@ class TabBarController:  UITabBarController, UITabBarControllerDelegate {
     
     //MARK: UITabbar Delegate
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        /*
-      if viewController.isKind(of: ActionViewController.self) {
-         let vc =  ActionViewController()
-         vc.modalPresentationStyle = .overFullScreen
-         self.present(vc, animated: true, completion: nil)
-         return false
-      }
-        */
+        
       return true
     }
     

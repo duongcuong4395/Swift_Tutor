@@ -20,16 +20,16 @@ class TextFieldDemoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup_Views()
+        setupViews()
     }
     
-    func setup_Views() {
+    private func setupViews() {
         
         // setup for textFieldDemoView
-        setup_textFieldDemoView()
+        setupTextFieldDemoView()
     }
     
-    func setup_textFieldDemoView() {
+    private func setupTextFieldDemoView() {
         self.view.addSubview(textFieldDemoView)
         
         textFieldDemoView.snp.makeConstraints({ (make) in

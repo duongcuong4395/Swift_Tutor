@@ -11,9 +11,9 @@ import Foundation
 
 class ItemModel {
   
-    var name : String?
-    var image : String?
-    var links : [String]?
+    var name : String = ""
+    var image : String = ""
+    var links : [String] = [""]
     
     init(name : String, image : String, links : [String]) {
         self.name = name

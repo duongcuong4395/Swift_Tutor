@@ -20,16 +20,16 @@ class LabelDemoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup_Views()
+        setupViews()
     }
     
-    func setup_Views() {
+    private func setupViews() {
         
         // setup for labelDemoView
-        setup_labelDemoView()
+        setupLabelDemoView()
     }
     
-    func setup_labelDemoView() {
+    private func setupLabelDemoView() {
         self.view.addSubview(labelDemoView)
         
         labelDemoView.snp.makeConstraints({ (make) in

@@ -20,7 +20,9 @@ class CompdocsViewController: UIViewController, WKUIDelegate {
     override func loadView() {
         self.title = Title.Tutorial.documentation
         
-        if(compdocsViewModel.dataSource.value.docsLink?.verifyUrl() == true) {
+        compdocsViewModel.dataSource.value.docsLink = compdocsViewModel.dataSource.value.docsLink == "" ? "https://forums.swift.org" : compdocsViewModel.dataSource.value.docsLink;
+        
+        if(compdocsViewModel.dataSource.value.docsLink.verifyUrl() == true) {
                 let webConfig = WKWebViewConfiguration()
                 webView = WKWebView(frame: .zero, configuration: webConfig)
                 webView.uiDelegate = self
@@ -28,9 +30,12 @@ class CompdocsViewController: UIViewController, WKUIDelegate {
             
             
             //print("doc_Link selected ", compdocsViewModel.dataSource.value.docsLink)
-            let url = URL(string: compdocsViewModel.dataSource.value.docsLink ?? "https://developer.apple.com/documentation/uikit/uibutton")
-            let request = URLRequest(url: url!)
-            webView.load(request)
+            
+            if let url = URL(string: compdocsViewModel.dataSource.value.docsLink) {
+                let request = URLRequest(url: url)
+                webView.load(request)
+            }
+            
             
             //webView.loadHTMLString("https://developer.apple.com/documentation/uikit/uibutton", baseURL: nil)
         }

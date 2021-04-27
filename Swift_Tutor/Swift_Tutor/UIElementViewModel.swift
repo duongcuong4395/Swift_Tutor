@@ -35,11 +35,7 @@ class UIElementViewModel: ItemsViewModel<UIElementModel> {
 
 
 class UIElementDataSource : GenericDataSource<UIElementModel>, UITableViewDataSource {
-    /*
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    */
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -53,7 +49,7 @@ class UIElementDataSource : GenericDataSource<UIElementModel>, UITableViewDataSo
 
         let component = self.data.value[indexPath.row]
         cell.nameLabel.text = component.name
-        cell.imageUIImage.image = UIImage(named: component.image!)
+        cell.imageUIImage.image = UIImage(named: component.image)
         return cell
     }
     

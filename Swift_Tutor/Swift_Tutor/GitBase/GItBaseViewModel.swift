@@ -51,7 +51,7 @@ class GitBaseDataSource : GenericDataSource<GitBaseModel>, UITableViewDataSource
 
         let category = self.data.value[indexPath.row]
         cell.nameLabel.text = category.name
-        cell.imageUIImage.image = UIImage(named: category.image!)
+        cell.imageUIImage.image = UIImage(named: category.image)
         return cell
     }
     

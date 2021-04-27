@@ -12,8 +12,6 @@ import SnapKit
 
 class UIFrameworkView : UIView {
     
-    
-    
     var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -31,21 +29,21 @@ class UIFrameworkView : UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setup_View()
-        setup_Events()
+        setupView()
+        setupEvents()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup_View() {
+    func setupView() {
         
         // setup Constrains
-        setup_Constrains_titleLabel()
+        setupConstrainsTitleLabel()
         
-        setup_Constrains_swiftUiView()
-        setup_Constrains_uiKitView()
+        setupConstrainsSwiftUiView()
+        setupConstrainsUIKitView()
         
         self.uiFrameworkViewModel.fetchUIFramework()
         self.uiFrameworkViewModel.dataSource.addAndNotify(observer: self, completionHandler: {
@@ -57,7 +55,7 @@ class UIFrameworkView : UIView {
     
     // MARK: Constrains
     
-    func setup_Constrains_titleLabel() {
+    func setupConstrainsTitleLabel() {
         self.addSubview(titleLabel)
         
         titleLabel.snp.makeConstraints { (make) in
@@ -67,7 +65,7 @@ class UIFrameworkView : UIView {
         }
     }
     
-    func setup_Constrains_swiftUiView() {
+    func setupConstrainsSwiftUiView() {
         
         self.addSubview(swiftUiView)
         
@@ -82,7 +80,7 @@ class UIFrameworkView : UIView {
         }
     }
     
-    func setup_Constrains_uiKitView() {
+    func setupConstrainsUIKitView() {
         
         self.addSubview(uiKitView)
         
@@ -99,7 +97,7 @@ class UIFrameworkView : UIView {
     
     // MARK: Events
     
-    func setup_Events() {
+    private func setupEvents() {
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.setup_swiftUiView_Touch))
         self.swiftUiView.addGestureRecognizer(gesture)
         
@@ -118,10 +116,10 @@ class UIFrameworkView : UIView {
     func ChangeUiFrameWork() {
         for item in (self.uiFrameworkViewModel.dataSource.value) {
             if item.name == Title.uiFramework.uiKit {
-                uiKitView.alpha = item.selected! ? 1 : 0.3
+                uiKitView.alpha = item.selected ? 1 : 0.3
             }
             if item.name == Title.uiFramework.swiftUI {
-                swiftUiView.alpha = item.selected! ? 1 : 0.3
+                swiftUiView.alpha = item.selected ? 1 : 0.3
             }
         }
     }

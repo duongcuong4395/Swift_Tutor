@@ -13,17 +13,32 @@ import SnapKit
 
 class Table {
     class IdCell {
-        public static var category = "id_TableCell_Category"
-        public static var uiElement = "id_TableCell_UIElement"
-        public static var compTutorial = "id_TableCell_CompTutorial"
-        public static var iOSFrameworks = "id_TableCell_IOSFrameworks"
+         static var category = "id_TableCell_Category"
+         static var uiElement = "id_TableCell_UIElement"
+         static var compTutorial = "id_TableCell_CompTutorial"
+         static var iOSFrameworks = "id_TableCell_IOSFrameworks"
+         static var git = "id_TableCell_Git"
+         static var network = "id_TableCell_Network"
+        
+        
+        class Git {
+            static var base = "id_TableCell_GitBase"
+            static var advance = "id_TableCell_GitAdvance"
+        }
     }
     
     class Id {
-        public static var category = "id_Table_Category"
-        public static var uiElement = "id_Table_UIElement"
-        public static var compTutorial = "id_Table_CompTutorial"
-        public static var iOSFrameworks = "id_Table_IOSFrameworks"
+         static var category = "id_Table_Category"
+         static var uiElement = "id_Table_UIElement"
+         static var compTutorial = "id_Table_CompTutorial"
+         static var iOSFrameworks = "id_Table_IOSFrameworks"
+         static var git = "id_Table_Git"
+         static var network = "id_Table_Network"
+        
+        class Git {
+            static var base = "id_Table_GitBase"
+            static var advance = "id_Table_GitAdvance"
+        }
     }
 
 }
@@ -45,15 +60,15 @@ class ItemCell: UITableViewCell {
         return label
     }()
     
-    func setup_Cell() {
-        setup_Constraints_ImageUIImage()
-        setup_Constraints_NameLabel()
+    func setupCell() {
+        setupConstraintsImageUIImage()
+        setupConstraintsNameLabel()
         
     }
     
     // MARK: Constrains
     
-    func setup_Constraints_NameLabel() {
+    func setupConstraintsNameLabel() {
         contentView.addSubview(nameLabel)
         
         nameLabel.snp.makeConstraints { (make) in
@@ -63,7 +78,7 @@ class ItemCell: UITableViewCell {
         }
     }
     
-    func setup_Constraints_ImageUIImage() {
+    func setupConstraintsImageUIImage() {
         contentView.addSubview(imageUIImage)
         
         imageUIImage.snp.makeConstraints { (make) in
@@ -94,22 +109,22 @@ class HorizontalItemView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setup_Cell()
+        setupCell()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup_Cell() {
-        setup_Constraints_ImageUIImage()
-        setup_Constraints_NameLabel()
+    func setupCell() {
+        setupConstraintsImageUIImage()
+        setupConstraintsNameLabel()
         
     }
     
     // MARK: Constrains
     
-    func setup_Constraints_NameLabel() {
+    func setupConstraintsNameLabel() {
         self.addSubview(nameLabel)
         
         nameLabel.snp.makeConstraints { (make) in
@@ -119,7 +134,7 @@ class HorizontalItemView: UIView {
         }
     }
     
-    func setup_Constraints_ImageUIImage() {
+    func setupConstraintsImageUIImage() {
         self.addSubview(imageUIImage)
         
         imageUIImage.snp.makeConstraints { (make) in
@@ -151,21 +166,21 @@ class VerticalItemView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setup_Cell()
+        setupCell()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup_Cell() {
-        setup_Constraints_NameLabel()
-        setup_Constraints_ImageUIImage()
+    func setupCell() {
+        setupConstraintsNameLabel()
+        setupConstraintsImageUIImage()
     }
     
     // MARK: Constrains
     
-    func setup_Constraints_NameLabel() {
+    func setupConstraintsNameLabel() {
         self.addSubview(nameLabel)
         
         nameLabel.snp.makeConstraints { (make) in
@@ -176,7 +191,7 @@ class VerticalItemView: UIView {
         }
     }
     
-    func setup_Constraints_ImageUIImage() {
+    func setupConstraintsImageUIImage() {
         self.addSubview(imageUIImage)
         
         imageUIImage.snp.makeConstraints { (make) in

@@ -19,16 +19,16 @@ class ButtonDemoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup_Views()
+        setupViews()
     }
     
-    func setup_Views() {
+    func setupViews() {
         
         // setup for buttonDemoView
-        setup_buttonDemoView()
+        setupButtonDemoView()
     }
     
-    func setup_buttonDemoView() {
+    private func setupButtonDemoView() {
         self.view.addSubview(buttonDemoView)
         
         buttonDemoView.snp.makeConstraints({ (make) in

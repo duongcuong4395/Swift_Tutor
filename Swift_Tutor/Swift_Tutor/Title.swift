@@ -14,6 +14,9 @@ class Title {
     class Category {
         public static var uiElement = "UI Elements"
         public static var iosFrameworks = "iOS Frameworks"
+        public static var git = "Git"
+        public static var networks = "Networks"
+        
     }
     
     class UIElement {
@@ -29,7 +32,7 @@ class Title {
         public static var swiftUI = "swiftUI"
     }
     
-    class iosFrameworks {
+    class IOSFrameworks {
         public static var coreAnimation = "Core Animation"
         public static var coreData = "Core Data"
     }
@@ -39,5 +42,28 @@ class Title {
         public static var topic = "Topic"
         public static var example = "Example"
     }
+    
+    class Network {
+        public static var urlSession = "URLSession"
+        public static var alamofire = "Alamofire"
+    }
 
+    class Git {
+        public static var base = "Base"
+        public static var advance = "Advance"
+        
+        class Base {
+            public static var git = "Git"
+            public static var branch = "Branch"
+            public static var repository = "repository"
+            public static var tags = "tags"
+            public static var commit = "commit"
+            public static var merge = "Merge"
+        }
+        
+        class Advance {
+            
+        }
+    }
+    
 }

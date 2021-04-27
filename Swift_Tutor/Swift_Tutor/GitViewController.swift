@@ -28,15 +28,15 @@ class GitViewController: UIViewController {
         self.view.backgroundColor = Themes.backgroundCorlor
         self.title = Title.Category.git
         
-        setup_Views()
+        setupViews()
     }
     
-    func setup_Views() {
-        setup_gitTableView()
+    func setupViews() {
+        setupGitTableView()
     }
     
-    func setup_gitTableView() {
-        setup_Constrains_gitTableView()
+    func setupGitTableView() {
+        setupConstrainsGitTableView()
         
         self.gitViewModel.fetchGit()
         
@@ -56,7 +56,7 @@ class GitViewController: UIViewController {
     }
     
     // MARK: Constrains
-    func setup_Constrains_gitTableView() {
+    func setupConstrainsGitTableView() {
         view.addSubview(gitTableView)
         
         gitTableView.snp.makeConstraints { (make) in
@@ -70,21 +70,21 @@ class GitViewController: UIViewController {
 extension GitViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let gitTouched = self.gitViewModel.dataSource?.data.value[indexPath.row]
-        print("Git selected ", gitTouched!.name as Any)
-        
-        
-        var vc = UIViewController()
-        
-        switch gitTouched?.name {
-        case Title.Git.base:
-            vc = GitBaseViewController()
-        case Title.Git.advance:
-            vc = iOSFrameworksViewController()
-        default:
-            vc = UIElementsViewController()
+        if let gitTouched = self.gitViewModel.dataSource?.data.value[indexPath.row] {
+            
+            var vc = UIViewController()
+            
+            switch gitTouched.name {
+            case Title.Git.base:
+                vc = GitBaseViewController()
+            case Title.Git.advance:
+                vc = iOSFrameworksViewController()
+            default:
+                vc = UIElementsViewController()
+            }
+            
+            self.navigationController!.pushViewController(vc, animated: true)
         }
         
-        self.navigationController!.pushViewController(vc, animated: true)
     }
 }

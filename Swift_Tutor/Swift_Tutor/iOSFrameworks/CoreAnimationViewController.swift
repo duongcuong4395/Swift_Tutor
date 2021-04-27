@@ -17,13 +17,13 @@ class CoreAnimationViewController: UIViewController {
     
     let imageViewZoom = UIImageView()
     let blackBackgroundView = UIView()
-    var imageViewResize: UIImageView?
+    var imageViewResize = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = Themes.backgroundCorlor
-        self.title = Title.iosFrameworks.coreAnimation
+        self.title = Title.IOSFrameworks.coreAnimation
         
         zoomImageView.isUserInteractionEnabled = true
         zoomImageView.frame = startingFrame
@@ -41,7 +41,7 @@ class CoreAnimationViewController: UIViewController {
         zoomInAnimateImageVIew(imageView: self.zoomImageView)
     }
     
-    func zoomInAnimateImageVIew(imageView: UIImageView) {
+    private func zoomInAnimateImageVIew(imageView: UIImageView) {
         self.imageViewResize = imageView
         if let startingFrame = imageView.superview?.convert(imageView.frame, to: nil) {
             
@@ -73,7 +73,7 @@ class CoreAnimationViewController: UIViewController {
     }
     
     @objc func zoomOutAnimateImageVIew() {
-        if let startingFrame = imageViewResize!.superview?.convert(imageViewResize!.frame, to: nil) {
+        if let startingFrame = imageViewResize.superview?.convert(imageViewResize.frame, to: nil) {
             
             UIView.animate(withDuration: 0.75, animations: {
                 self.imageViewZoom.frame = startingFrame
@@ -81,7 +81,7 @@ class CoreAnimationViewController: UIViewController {
             }) { (didComplete) in
                 self.imageViewZoom.removeFromSuperview()
                 self.blackBackgroundView.removeFromSuperview()
-                self.imageViewResize?.alpha = 1
+                self.imageViewResize.alpha = 1
             }
             
         }

@@ -29,15 +29,15 @@ class GitBaseViewController: UIViewController {
         self.view.backgroundColor = Themes.backgroundCorlor
         self.title = Title.Git.base
         
-        setup_Views()
+        setupViews()
     }
     
-    func setup_Views() {
-        setup_gitBaseTableView()
+    func setupViews() {
+        setupGitBaseTableView()
     }
     
-    func setup_gitBaseTableView() {
-        setup_Constrains_gitBaseTableView()
+    func setupGitBaseTableView() {
+        setupConstrainsGitBaseTableView()
         
         self.gitBaseViewModel.fetchGit()
         
@@ -57,7 +57,7 @@ class GitBaseViewController: UIViewController {
     }
     
     // MARK: Constrains
-    func setup_Constrains_gitBaseTableView() {
+    func setupConstrainsGitBaseTableView() {
         view.addSubview(gitBaseTableView)
         
         gitBaseTableView.snp.makeConstraints { (make) in
@@ -70,19 +70,19 @@ class GitBaseViewController: UIViewController {
 extension GitBaseViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let gitBaseTouched = self.gitBaseViewModel.dataSource?.data.value[indexPath.row]
-        print("Git base selected ", gitBaseTouched!.name as Any)
-        
-        //let comptTutorialViewController = ComptTutorialViewController(nameFillter: Title.Tutorial.example)
-        //comptTutorialViewController.comptTutorialViewModel.compSelected = gitBaseTouched!
+        if let gitBaseTouched = self.gitBaseViewModel.dataSource?.data.value[indexPath.row] {
+            //let comptTutorialViewController = ComptTutorialViewController(nameFillter: Title.Tutorial.example)
+            //comptTutorialViewController.comptTutorialViewModel.compSelected = gitBaseTouched!
 
-        let comptTutorialViewController: Any
-        comptTutorialViewController = ComptTutorialViewController(nameFillter: Title.Tutorial.example, compSelected: gitBaseTouched!, exampleController: UIViewController())
-        
-        
-        let navigationController = UINavigationController(rootViewController: comptTutorialViewController as! UIViewController)
-        
-        self.present(navigationController, animated: true, completion: nil)
+            let comptTutorialViewController: Any
+            
+            comptTutorialViewController = ComptTutorialViewController(nameFillter: Title.Tutorial.example, compSelected: gitBaseTouched, exampleController: UIViewController())
+            
+            
+            let navigationController = UINavigationController(rootViewController: comptTutorialViewController as! UIViewController)
+            
+            self.present(navigationController, animated: true, completion: nil)
+        }
         
     }
 }

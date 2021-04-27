@@ -23,15 +23,15 @@ class ToolBarViewController: UIViewController {
         title = "Toolbar"
         self.view.backgroundColor = .white
         
-        setup_views()
+        setupViews()
     }
     
-    func setup_views() {
-        setup_Constrains_ToolBar()
-        setup_ToolBar()
+    private func setupViews() {
+        setupConstrainsToolBar()
+        setupToolBar()
     }
     
-    func setup_Constrains_ToolBar() {
+    private func setupConstrainsToolBar() {
         self.view.addSubview(toolBar)
         
         toolBar.snp.makeConstraints { (make) in
@@ -43,7 +43,7 @@ class ToolBarViewController: UIViewController {
         }
     }
     
-    func setup_ToolBar() {
+    private func setupToolBar() {
         
         items.append(
             UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)

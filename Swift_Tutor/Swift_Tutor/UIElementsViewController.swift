@@ -33,16 +33,16 @@ class UIElementsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setup_Views()
+        setupViews()
     }
     
     
-    func setup_Views() {
-        setup_componentTableView()
+    private func setupViews() {
+        setupComponentTableView()
     }
     
-    func setup_componentTableView() {
-        setup_Constrains_setup_componentTableView()
+    private func setupComponentTableView() {
+        setupConstrainsComponentTableView()
         
         self.uiElementViewModel.fetchComponent()
         
@@ -62,7 +62,7 @@ class UIElementsViewController: UIViewController {
     }
     
     // MARK: Constrains
-    func setup_Constrains_setup_componentTableView() {
+    private func setupConstrainsComponentTableView() {
         view.addSubview(uiElementTableView)
         
         uiElementTableView.snp.makeConstraints { (make) in
@@ -77,30 +77,31 @@ class UIElementsViewController: UIViewController {
 extension UIElementsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let component = self.uiElementViewModel.dataSource?.data.value[indexPath.row]
-        print("Component selected ", component!.name as Any)
-        
-        let comptTutorialViewController = ComptTutorialViewController()
-        comptTutorialViewController.comptTutorialViewModel.compSelected = component!
-        
-        switch component?.name {
-        case Title.UIElement.button:
-            comptTutorialViewController.comptTutorialViewModel.exampleController = ButtonDemoController()
-        case Title.UIElement.toolBar:
-            comptTutorialViewController.comptTutorialViewModel.exampleController = ToolBarViewController()
-        case Title.UIElement.textField:
-            comptTutorialViewController.comptTutorialViewModel.exampleController = TextFieldDemoController()
-        case Title.UIElement.tabBar:
-            comptTutorialViewController.comptTutorialViewModel.exampleController = TabBarController()
-        case Title.UIElement.label:
-            comptTutorialViewController.comptTutorialViewModel.exampleController = LabelDemoController()
-        default:
-            comptTutorialViewController.comptTutorialViewModel.exampleController = ButtonDemoController()
+        if let component = self.uiElementViewModel.dataSource?.data.value[indexPath.row] {
+            print("Component selected ", component.name as Any)
+            
+            let comptTutorialViewController: Any
+            
+            switch component.name {
+            case Title.UIElement.button:
+                comptTutorialViewController = ComptTutorialViewController(nameFillter: "", compSelected: component, exampleController: ButtonDemoController())
+            case Title.UIElement.toolBar:
+                comptTutorialViewController = ComptTutorialViewController(nameFillter: "", compSelected: component, exampleController: ToolBarViewController())
+            case Title.UIElement.textField:
+                comptTutorialViewController = ComptTutorialViewController(nameFillter: "", compSelected: component, exampleController: TextFieldDemoController())
+            case Title.UIElement.tabBar:
+                comptTutorialViewController = ComptTutorialViewController(nameFillter: "", compSelected: component, exampleController: TabBarController())
+            case Title.UIElement.label:
+                comptTutorialViewController = ComptTutorialViewController(nameFillter: "", compSelected: component, exampleController: LabelDemoController())
+            default:
+                comptTutorialViewController = ComptTutorialViewController(nameFillter: "", compSelected: component, exampleController: ButtonDemoController())
+            }
+            
+            
+            let navigationController = UINavigationController(rootViewController: comptTutorialViewController as! UIViewController)
+            
+            self.present(navigationController, animated: true, completion: nil)
         }
         
-        
-        let navigationController = UINavigationController(rootViewController: comptTutorialViewController)
-        
-        self.present(navigationController, animated: true, completion: nil)
     }
 }

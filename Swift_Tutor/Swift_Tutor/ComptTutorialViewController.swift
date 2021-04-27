@@ -11,7 +11,6 @@ import Foundation
 import UIKit
 import SnapKit
 
-
 class ComptTutorialViewController: UIViewController {
     
     let uiFrameworkView = UIFrameworkView()
@@ -29,26 +28,41 @@ class ComptTutorialViewController: UIViewController {
         
         title = comptTutorialViewModel.compSelected.name
         self.view.backgroundColor = .white
+
+    }
+    
+    
+    init(nameFillter: String, compSelected: ItemModel, exampleController: UIViewController) {
         
-        setup_View()
+        super.init(nibName: nil, bundle: nil)
         
+        comptTutorialViewModel.filterBy(name: nameFillter)
+        comptTutorialViewModel.setupCompSelectedBy(itemModel: compSelected)
+        
+        comptTutorialViewModel.setupExampleControllerBy(uiViewController: exampleController)
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        setupView()
     }
     
-    func setup_View() {
-        setup_Constrains_uiFrameworkView()
-        setup_Constrains_comptTutorialTableView()
+    private func setupView() {
+        setupConstrainsUIFrameworkView()
+        setupConstrainsComptTutorialTableView()
         
-        setup_comptTutorialTableView()
+        setupComptTutorialTableView()
     }
     
     // MARK: Constrains
     
-    func setup_Constrains_uiFrameworkView() {
+    private func setupConstrainsUIFrameworkView() {
         view.addSubview(uiFrameworkView)
         
         uiFrameworkView.snp.makeConstraints { (make) in
@@ -59,7 +73,7 @@ class ComptTutorialViewController: UIViewController {
         }
     }
     
-    func setup_Constrains_comptTutorialTableView() {
+     private func setupConstrainsComptTutorialTableView() {
         view.addSubview(comptTutorialTableView)
         
         comptTutorialTableView.snp.makeConstraints { (make) in
@@ -72,7 +86,7 @@ class ComptTutorialViewController: UIViewController {
     
     // MARK: Event
     
-    func setup_comptTutorialTableView() {
+    private func setupComptTutorialTableView() {
         self.comptTutorialViewModel.fetchTutorial()
         
         comptTutorialTableView.dataSource = self.dataSource
@@ -89,27 +103,29 @@ class ComptTutorialViewController: UIViewController {
             }
         })
     }
+    
 }
 
 
 extension ComptTutorialViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let compTutor = self.comptTutorialViewModel.dataSource?.data.value[indexPath.row]
-        print("compTutor selected ", compTutor!.name as Any)
-        
-        switch compTutor!.name {
-            case Title.Tutorial.documentation:
-                let vc = CompdocsViewController()
-                vc.compdocsViewModel.updateLinks(link: comptTutorialViewModel.compSelected.links?[0] ?? "")
-                self.navigationController!.pushViewController(vc, animated: true)
-            case Title.Tutorial.example:
-                self.navigationController!.pushViewController(comptTutorialViewModel.exampleController, animated: true)
-            case Title.Tutorial.topic:
-                let vc = ComptTopicsViewController()
-                self.navigationController!.pushViewController(vc, animated: true)
-            default:
-                print("No case")
+        if let compTutor = self.comptTutorialViewModel.dataSource?.data.value[indexPath.row] {
+            print("compTutor selected ", compTutor.name as Any)
+            
+            switch compTutor.name {
+                case Title.Tutorial.documentation:
+                    let vc = CompdocsViewController()
+                    vc.compdocsViewModel.updateLinks(link: comptTutorialViewModel.compSelected.links[0])
+                    self.navigationController!.pushViewController(vc, animated: true)
+                case Title.Tutorial.example:
+                    self.navigationController!.pushViewController(comptTutorialViewModel.exampleController, animated: true)
+                case Title.Tutorial.topic:
+                    let vc = ComptTopicsViewController()
+                    self.navigationController!.pushViewController(vc, animated: true)
+                default:
+                    print("No case")
+            }
         }
         
     }

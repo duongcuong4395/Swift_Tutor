@@ -26,18 +26,18 @@ class ComptExampleViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setup_Views()
+        setupViews()
     }
     
-    func setup_Views() {
+    private func setupViews() {
         
         // setup for buttonDemoView
-        setup_buttonDemoView()
+        setupButtonDemoView()
         
         
     }
     
-    func setup_buttonDemoView() {
+    func setupButtonDemoView() {
         self.view.addSubview(buttonDemoView)
         
         buttonDemoView.snp.makeConstraints({ (make) in

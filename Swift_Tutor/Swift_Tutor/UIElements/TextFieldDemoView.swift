@@ -30,14 +30,14 @@ class TextFieldDemoView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setup_TextField()
+        setupTextField()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup_TextField() {
+    func setupTextField() {
         
     }
 }

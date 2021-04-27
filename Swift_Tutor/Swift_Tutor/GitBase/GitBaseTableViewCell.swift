@@ -17,24 +17,24 @@ class GitBaseTableViewCell : ItemCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: Table.IdCell.Git.base)
-        setup_Cell()
+        setupCell()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func setup_Cell() {
-        super.setup_Cell()
+    override func setupCell() {
+        super.setupCell()
     }
     
     // MARK: Constrains
     
-    override func setup_Constraints_NameLabel() {
-        super.setup_Constraints_NameLabel()
+    override func setupConstraintsNameLabel() {
+        super.setupConstraintsNameLabel()
     }
     
-    override func setup_Constraints_ImageUIImage() {
-        super.setup_Constraints_ImageUIImage()
+    override func setupConstraintsImageUIImage() {
+        super.setupConstraintsImageUIImage()
     }
 }

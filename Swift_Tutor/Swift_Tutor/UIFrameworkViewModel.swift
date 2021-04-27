@@ -26,6 +26,7 @@ class UIFrameworkViewModel {
         self.listModel.append(swiftUIModel)
         self.dataSource = DynamicValue<[UIFrameworkModel]>(listModel)
     }
+    
     func fetchUIFramework() {
         self.dataSource.value = self.listModel
     }

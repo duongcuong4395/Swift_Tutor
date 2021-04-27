@@ -13,9 +13,10 @@ import Foundation
 
 class ComptTutorialModel : ItemModel {
 
-    
+    var isHidden : Bool?
     
     override init(name : String, image : String, links : [String]) {
         super.init(name: name, image: image, links: links)
+        self.isHidden = false
     }
 }

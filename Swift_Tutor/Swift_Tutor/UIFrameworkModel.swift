@@ -11,7 +11,7 @@ import Foundation
 
 class UIFrameworkModel : ItemModel {
   
-    var selected : Bool?
+    var selected : Bool = false
     
     override init(name : String, image : String, links : [String]) {
         super.init(name: name, image: image, links: links)

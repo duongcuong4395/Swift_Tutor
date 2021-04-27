@@ -12,8 +12,8 @@ import UIKit
 
 class IOSFrameworksViewModel: ItemsViewModel<IOSFrameworksModel> {
     
-    let coreAnimationModel = IOSFrameworksModel(name: Title.iosFrameworks.coreAnimation, image: Image.iosFrameworks.coreAnimation, links: [""])
-    let coreDataModel = IOSFrameworksModel(name: Title.iosFrameworks.coreData, image: Image.iosFrameworks.coreData, links: [""])
+    let coreAnimationModel = IOSFrameworksModel(name: Title.IOSFrameworks.coreAnimation, image: Image.iosFrameworks.coreAnimation, links: [""])
+    let coreDataModel = IOSFrameworksModel(name: Title.IOSFrameworks.coreData, image: Image.iosFrameworks.coreData, links: [""])
 
     override init(dataSource : GenericDataSource<IOSFrameworksModel>?) {
         super.init(dataSource: dataSource)
@@ -47,7 +47,7 @@ class IOSFrameworksDataSource : GenericDataSource<IOSFrameworksModel>, UITableVi
 
         let component = self.data.value[indexPath.row]
         cell.nameLabel.text = component.name
-        cell.imageUIImage.image = UIImage(named: component.image!)
+        cell.imageUIImage.image = UIImage(named: component.image)
         return cell
     }
     

@@ -14,6 +14,9 @@ class Image {
     class Category {
         public static var uiElement = "uiElement"
         public static var iosFrameworks = "iosFrameworks"
+        public static var git = "git"
+        public static var network = "network"
+        
     }
     
     class UIElement {
@@ -38,5 +41,28 @@ class Image {
         public static var documentation = "documentation"
         public static var topic = "topic"
         public static var example = "example"
+    }
+    
+    class Network {
+        public static var urlSession = "urlSession"
+        public static var alamofire = "alamofire"
+    }
+    
+    class Git {
+        public static var base = "Base"
+        public static var advance = "Advance"
+        
+        class Base {
+            public static var git = "Git"
+            public static var branch = "Branch"
+            public static var repository = "repository"
+            public static var tags = "tags"
+            public static var commit = "commit"
+            public static var merge = "Merge"
+        }
+        
+        class Advance {
+            
+        }
     }
 }

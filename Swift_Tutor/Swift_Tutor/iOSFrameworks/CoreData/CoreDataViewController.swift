@@ -17,7 +17,7 @@ class CoreDataViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = Themes.backgroundCorlor
-        self.title = Title.iosFrameworks.coreData
+        self.title = Title.IOSFrameworks.coreData
         
     }
 }
