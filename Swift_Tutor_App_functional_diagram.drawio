@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-05-01T07:43:31.634Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="V-kj_gSToMDs7gtEv2Xo" version="14.6.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-01T07:46:08.478Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="VjuMp7NlFYmYvF-i45K3" version="14.6.1" type="github">
   <diagram id="CXttLjTAoCu7LxISHfBc" name="Page-1">
-    <mxGraphModel dx="599" dy="310" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -890,7 +890,7 @@
         <mxCell id="K0b4Kzpc0WJh27bLE8ay-106" value="&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; ; font-size: 13px ; text-align: left ; background-color: rgb(255 , 255 , 255)&quot;&gt;Network&lt;/span&gt;&lt;span style=&quot;font-size: 12px&quot;&gt;&lt;b style=&quot;font-size: 12px&quot;&gt;&lt;br style=&quot;font-size: 12px&quot;&gt;&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;opacity=70;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="886.69" y="1855" width="129.5" height="20" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; ; font-size: 13px ; font-weight: 400 ; background-color: rgb(255 , 255 , 255)&quot;&gt;URLSession&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; ; font-size: 13px ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;br&gt;&lt;/span&gt;" link="https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Cocoa.html" id="K0b4Kzpc0WJh27bLE8ay-109">
+        <UserObject label="&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; ; font-size: 13px ; font-weight: 400 ; background-color: rgb(255 , 255 , 255)&quot;&gt;Alamofire&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; ; font-size: 13px ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;br&gt;&lt;/span&gt;" link="https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Cocoa.html" id="K0b4Kzpc0WJh27bLE8ay-109">
           <mxCell style="html=1;fillColor=none;strokeColor=none;fontSize=10;align=left;fontColor=#000000;whiteSpace=wrap;fontStyle=1" parent="1" vertex="1">
             <mxGeometry x="523.4399999999999" y="1958.5" width="87.37" height="20" as="geometry" />
           </mxCell>
