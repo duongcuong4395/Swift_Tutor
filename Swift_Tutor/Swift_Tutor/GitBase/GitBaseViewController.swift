@@ -39,7 +39,7 @@ class GitBaseViewController: UIViewController {
     func setupGitBaseTableView() {
         setupConstrainsGitBaseTableView()
         
-        self.gitBaseViewModel.fetchGit()
+        self.gitBaseViewModel.updateDataSource()
         
         gitBaseTableView.dataSource = self.dataSource
         gitBaseTableView.delegate = self

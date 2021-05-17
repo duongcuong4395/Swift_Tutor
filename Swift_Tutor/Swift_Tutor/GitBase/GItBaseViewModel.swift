@@ -29,7 +29,7 @@ class GitBaseViewModel: ItemsViewModel<GitBaseModel> {
         self.listModel.append(mergeModel)
     }
 
-    func fetchGit() {
+    func updateDataSource() {
         
         self.dataSource?.data.value = self.listModel
     }
@@ -62,7 +62,7 @@ class GitBaseDataSource : GenericDataSource<GitBaseModel>, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if(editingStyle == .delete) {
+        if editingStyle == .delete {
             self.data.value.remove(at: indexPath.row)
         }
     }
