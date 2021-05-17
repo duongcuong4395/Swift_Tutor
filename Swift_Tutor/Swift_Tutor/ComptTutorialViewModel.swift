@@ -14,32 +14,48 @@ import UIKit
 
 class ComptTutorialViewModel: ItemsViewModel<ComptTutorialModel> {
     
-    let documentationModel = ComptTutorialModel(name: Title.Tutorial.documentation, image: Image.Tutorial.documentation)
+    let documentationModel = ComptTutorialModel(name: Title.Tutorial.documentation, image: Image.Tutorial.documentation, links: [""])
     //let topicModel = ComptTutorialModel(name: Title.Tutorial.topic, image: Image.Tutorial.topic)
-    let exampleModel = ComptTutorialModel(name: Title.Tutorial.example, image: Image.Tutorial.example)
+    let exampleModel = ComptTutorialModel(name: Title.Tutorial.example, image: Image.Tutorial.example, links: [""])
 
+    var compSelected = ItemModel(name: "", image: "", links: [""])
+    var exampleController = UIViewController()
+    
+    
     override init(dataSource : GenericDataSource<ComptTutorialModel>?) {
         super.init(dataSource: dataSource)
+        
         self.listModel.append(documentationModel)
-        //self.listModel.append(topicModel)
         self.listModel.append(exampleModel)
+        
+        self.dataSource?.data.value = self.listModel
     }
 
     func fetchTutorial() {
         
-        self.dataSource?.data.value = self.listModel
+        //self.dataSource?.data.value = self.listModel
+    }
+    
+    func setupCompSelectedBy(itemModel: ItemModel) {
+        compSelected = itemModel
+    }
+    
+    func setupExampleControllerBy(uiViewController: UIViewController) {
+        if (uiViewController == UIViewController()) {return}
+        
+        exampleController = uiViewController
+    }
+    
+    func filterBy(name: String) {
+        if name == "" { return }
+        self.dataSource?.data.value = (self.dataSource?.data.value.filter { $0.name == name })!
+
     }
 }
 
 
 
 class ListComptTutorialDataSource : GenericDataSource<ComptTutorialModel>, UITableViewDataSource {
-    
-    /*
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    */
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -54,7 +70,7 @@ class ListComptTutorialDataSource : GenericDataSource<ComptTutorialModel>, UITab
 
         let compTutor = self.data.value[indexPath.row]
         cell.nameLabel.text = compTutor.name
-        cell.imageUIImage.image = UIImage(named: compTutor.image!)
+        cell.imageUIImage.image = UIImage(named: compTutor.image)
         return cell
     }
     

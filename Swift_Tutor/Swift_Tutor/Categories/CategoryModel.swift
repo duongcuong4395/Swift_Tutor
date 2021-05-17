@@ -10,9 +10,9 @@ import Foundation
 
 // MARK: CategoryModel
 
-public class CategoryModel : ItemModel {
+class CategoryModel : ItemModel {
 
-    override init(name : String, image : String) {
-        super.init(name: name, image: image)
+    override init(name : String, image : String, links: [String]) {
+        super.init(name: name, image: image, links: links)
     }
 }

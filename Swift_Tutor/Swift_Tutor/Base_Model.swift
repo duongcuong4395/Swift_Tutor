@@ -9,13 +9,15 @@
 import Foundation
 
 
-public class ItemModel {
+class ItemModel {
   
-    public var name : String?
-    public var image : String?
+    var name : String = ""
+    var image : String = ""
+    var links : [String] = [""]
     
-    init(name : String, image : String) {
+    init(name : String, image : String, links : [String]) {
         self.name = name
         self.image = image
+        self.links  = links
     }
 }

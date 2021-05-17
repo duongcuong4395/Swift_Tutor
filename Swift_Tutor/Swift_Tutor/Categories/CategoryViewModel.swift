@@ -13,11 +13,18 @@ import UIKit
 
 class CategoryViewModel: ItemsViewModel<CategoryModel> {
     
-    let component = CategoryModel(name: Title.Category.component, image: Image.Category.component)
+    let component = CategoryModel(name: Title.Category.uiElement, image: Image.Category.uiElement, links: [""])
+    let iosFrameworksModel = CategoryModel(name: Title.Category.iosFrameworks, image: Image.Category.iosFrameworks, links: [""])
+    let networksModel = CategoryModel(name: Title.Category.networks, image: Image.Category.network, links: [""])
+    let gitModel = CategoryModel(name: Title.Category.git, image: Image.Category.git, links: [""])
 
     override init(dataSource : GenericDataSource<CategoryModel>?) {
         super.init(dataSource: dataSource)
+        
         self.listModel.append(component)
+        self.listModel.append(iosFrameworksModel)
+        self.listModel.append(networksModel)
+        self.listModel.append(gitModel)
     }
 
     func fetchCategory() {
@@ -48,7 +55,7 @@ class ListCategoryDataSource : GenericDataSource<CategoryModel>, UITableViewData
 
         let category = self.data.value[indexPath.row]
         cell.nameLabel.text = category.name
-        cell.imageUIImage.image = UIImage(named: category.image!)
+        cell.imageUIImage.image = UIImage(named: category.image)
         return cell
     }
     

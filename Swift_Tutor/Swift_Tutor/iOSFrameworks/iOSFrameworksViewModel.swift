@@ -1,32 +1,34 @@
 //
-//  ComponentViewModel.swift
+//  iOSFrameworksViewModel.swift
 //  Swift_Tutor
 //
-//  Created by Duong Cuong on 3/20/21.
+//  Created by Duong Cuong on 4/6/21.
 //  Copyright © 2021 Duong Cuong. All rights reserved.
 //
 
 import Foundation
 
-
 import UIKit
 
-class ComponentViewModel: ItemsViewModel<ComponentModel> {
-   
-    let buttonModel = ComponentModel(name: Title.Component.button, image: Image.Component.button)
+class IOSFrameworksViewModel: ItemsViewModel<IOSFrameworksModel> {
+    
+    let coreAnimationModel = IOSFrameworksModel(name: Title.IOSFrameworks.coreAnimation, image: Image.iosFrameworks.coreAnimation, links: [""])
+    let coreDataModel = IOSFrameworksModel(name: Title.IOSFrameworks.coreData, image: Image.iosFrameworks.coreData, links: [""])
 
-    override init(dataSource : GenericDataSource<ComponentModel>?) {
+    override init(dataSource : GenericDataSource<IOSFrameworksModel>?) {
         super.init(dataSource: dataSource)
-        self.listModel.append(buttonModel)
+        
+        self.listModel.append(coreAnimationModel)
+        self.listModel.append(coreDataModel)
     }
 
-    func fetchCategory() {
+    func fetchData() {
         self.dataSource?.data.value = self.listModel
     }
 }
 
 
-class ListComponentDataSource : GenericDataSource<ComponentModel>, UITableViewDataSource {
+class IOSFrameworksDataSource : GenericDataSource<IOSFrameworksModel>, UITableViewDataSource {
     /*
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
@@ -41,11 +43,11 @@ class ListComponentDataSource : GenericDataSource<ComponentModel>, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Table.IdCell.component, for: indexPath) as! ComponentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Table.IdCell.iOSFrameworks, for: indexPath) as! IOSFrameworksCell
 
         let component = self.data.value[indexPath.row]
         cell.nameLabel.text = component.name
-        cell.imageUIImage.image = UIImage(named: component.image!)
+        cell.imageUIImage.image = UIImage(named: component.image)
         return cell
     }
     
@@ -59,14 +61,5 @@ class ListComponentDataSource : GenericDataSource<ComponentModel>, UITableViewDa
         if(editingStyle == .delete) {
             self.data.value.remove(at: indexPath.row)
         }
-    }
-}
-
-extension ListComponentDataSource : UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let component = self.data.value[indexPath.row]
-        print("Component name selected ", component.name as Any)
-        print("Component image selected ", component.image as Any)
     }
 }

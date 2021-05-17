@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class CompdocsModel {
+  
+    var docsLink : String = ""
+    
+    init(docsLink : String) {
+        self.docsLink = docsLink
+    }
+}

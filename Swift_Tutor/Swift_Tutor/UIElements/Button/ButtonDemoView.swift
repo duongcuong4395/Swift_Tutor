@@ -12,39 +12,7 @@ import Foundation
 import SnapKit
 import UIKit
 
-extension UIButton {
-    func title_With(title: String, color: UIColor, state: UIControl.State) {
-        let button = self // changes made here
-        button.setTitle(title, for: state)
-        button.setTitleColor(.black, for: state)
-    }
-    
-    func border_With(width: CGFloat, color: CGColor) {
-        let button = self // changes made here
-        button.layer.borderWidth = width
-        button.layer.borderColor = color
-    }
-    
-    func shadow_With(color: CGColor, offset: CGSize, opacity: Float, radius: CGFloat) {
-        let button = self // changes made here
-        button.layer.shadowColor = color
-        button.layer.shadowOffset = offset
-        button.layer.shadowOpacity = opacity
-        button.layer.shadowRadius = radius
-    }
-    
-    func image_With(img: UIImage, control: UIControl.State)  {
-        let button = self // changes made here
-        button.setImage(img, for: control)
-    }
-    
-    func background_With(color: UIColor, img: UIImage, control: UIControl.State)  {
-        let button = self // changes made here
-        button.setBackgroundImage(img, for: control)
-        button.backgroundColor = color
-    }
-    
-}
+
 
 enum ButtonEvent {
     case reset
@@ -65,7 +33,7 @@ class ButtonDemoView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
-        setup_Button()
+        setupButton()
     }
     
     required init?(coder: NSCoder) {
@@ -73,20 +41,18 @@ class ButtonDemoView: UIView {
     }
     
     
-    func setup_Button() {
-        setup_Button_Constrains()
-        
-        
-        setup_Button_Events(buttonEvent: .reset)
-        setup_Button_Events(buttonEvent: .shadow)
-        setup_Button_Events(buttonEvent: .boder)
-        setup_Button_Events(buttonEvent: .action)
-        setup_Button_Events(buttonEvent: .image)
+    func setupButton() {
+        setupButtonConstrains()
+        setupButtonEvents(buttonEvent: .reset)
+        setupButtonEvents(buttonEvent: .shadow)
+        setupButtonEvents(buttonEvent: .boder)
+        setupButtonEvents(buttonEvent: .action)
+        setupButtonEvents(buttonEvent: .image)
         
     }
     
     // MARK: Constrains
-    func setup_Button_Constrains() {
+    func setupButtonConstrains() {
         
         self.addSubview(button)
         button.snp.makeConstraints { (make) in
@@ -123,59 +89,58 @@ class ButtonDemoView: UIView {
     
     // MARK: Events
     
-    func setup_Button_Events(buttonEvent: ButtonEvent)  {
+    func setupButtonEvents(buttonEvent: ButtonEvent)  {
         switch buttonEvent {
         case .reset:
-            setup_Button_default()
+            setupButtondefault()
         case .boder:
-            setup_Button_Border()
+            setupButtonBorder()
         case .action:
-            setup_Button_Action()
+            setupButtonAction()
         case .shadow:
-            setup_Button_Shadow()
+            setupButtonShadow()
         case .image:
-            setup_Button_Image()
+            setupButtonImage()
         }
     }
     
-    func setup_Button_default() {
-        button.title_With(title: "Button Default", color: .black, state: .normal)
+    private func setupButtondefault() {
+        button.titleWith(title: "Button Default", color: .black, state: .normal)
     }
     
-    
-    func setup_Button_Border() {
-        buttonBorder.title_With(title: "Button with border", color: .black, state: .normal)
-        buttonBorder.border_With(width: 1, color: UIColor.black.cgColor)
+    private func setupButtonBorder() {
+        buttonBorder.titleWith(title: "Button with border", color: .black, state: .normal)
+        buttonBorder.borderWith(width: 1, color: UIColor.black.cgColor)
         
         buttonBorder.layer.cornerRadius = 5
     }
     
-    func setup_Button_Shadow() {
-        buttonShadow.title_With(title: "Button with Shadow", color: .black, state: .normal)
-        buttonShadow.border_With(width: 1, color: UIColor.black.cgColor)
-        buttonShadow.shadow_With(color: UIColor.brown.cgColor, offset: CGSize(width: 0.0, height: 3.0), opacity: 1.0, radius: 2)
+    private func setupButtonShadow() {
+        buttonShadow.titleWith(title: "Button with Shadow", color: .black, state: .normal)
+        buttonShadow.borderWith(width: 1, color: UIColor.black.cgColor)
+        buttonShadow.shadowWith(color: UIColor.brown.cgColor, offset: CGSize(width: 0.0, height: 3.0), opacity: 1.0, radius: 2)
         
         buttonShadow.layer.cornerRadius = 5
     }
     
-    func setup_Button_Action() {
-        buttonAtion.title_With(title: "Button with Touch", color: .black, state: .normal)
-        buttonAtion.border_With(width: 1, color: UIColor.black.cgColor)
-        buttonAtion.shadow_With(color: UIColor.black.cgColor, offset: CGSize(width: 0.0, height: 2.0), opacity: 1.0, radius: 1)
-        buttonAtion.addTarget(self, action: #selector(buttonAtion_Touch), for: .touchDown)
+    private func setupButtonAction() {
+        buttonAtion.titleWith(title: "Button with Touch", color: .black, state: .normal)
+        buttonAtion.borderWith(width: 1, color: UIColor.black.cgColor)
+        buttonAtion.shadowWith(color: UIColor.black.cgColor, offset: CGSize(width: 0.0, height: 2.0), opacity: 1.0, radius: 1)
+        buttonAtion.addTarget(self, action: #selector(buttonAtionTouch), for: .touchDown)
     }
     
-    @objc func buttonAtion_Touch() {
+    @objc func buttonAtionTouch() {
         let alert = UIAlertController(title: "Alert",message:"This Botton Touched",
                                       preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK",style:UIAlertAction.Style.default,handler: nil))
         self.window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
     
-    func setup_Button_Image() {
-        buttonImage.title_With(title: "Button with image", color: .black, state: .normal)
-        buttonImage.border_With(width: 1, color: UIColor.black.cgColor)
-        buttonImage.shadow_With(color: UIColor.black.cgColor, offset: CGSize(width: 0.0, height: 2.0), opacity: 1.0, radius: 1)
-        buttonImage.image_With(img: UIImage(named: "cool")!, control: .normal)
+    private func setupButtonImage() {
+        buttonImage.titleWith(title: "Button with image", color: .black, state: .normal)
+        buttonImage.borderWith(width: 1, color: UIColor.black.cgColor)
+        buttonImage.shadowWith(color: UIColor.black.cgColor, offset: CGSize(width: 0.0, height: 2.0), opacity: 1.0, radius: 1)
+        buttonImage.imageWith(img: UIImage(named: "cool")!, control: .normal)
     }
 }

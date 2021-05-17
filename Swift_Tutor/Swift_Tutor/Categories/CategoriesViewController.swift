@@ -23,21 +23,21 @@ class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup_Navigate()
+        setupNavigate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setup_Views()
+        setupViews()
     }
     
-    func setup_Views() {
-        setup_categoryTableView()
+    private func setupViews() {
+        setupCategoryTableView()
     }
     
-    func setup_categoryTableView() {
-        setup_Constrains_categoryTableView()
+    private func setupCategoryTableView() {
+        setupConstrainsCategoryTableView()
         
         self.categoryViewModel.fetchCategory()
         
@@ -49,7 +49,7 @@ class CategoriesViewController: UIViewController {
             
             if self!.dataSource.data.value.count > 0 {
                 for wc in self!.dataSource.data.value {
-                    print(wc.name as Any)
+                    print("List Categories", wc.name as Any)
                 }
                 
             }
@@ -57,7 +57,7 @@ class CategoriesViewController: UIViewController {
     }
     
     // MARK: Constrains
-    func setup_Constrains_categoryTableView() {
+    private func setupConstrainsCategoryTableView() {
         view.addSubview(categoryTableView)
         
         categoryTableView.snp.makeConstraints { (make) in
@@ -66,10 +66,10 @@ class CategoriesViewController: UIViewController {
     }
     
     // MARK: Navigate
-    func setup_Navigate() {
+    private func setupNavigate() {
         
-        let leftButton = UIBarButtonItem(title: "Left", style: .plain, target: self, action: #selector(left_Navigate_Event))
-        let rightButton = UIBarButtonItem(title: "Right", style: .plain, target: self, action: #selector(right_Navigate_Event))
+        let leftButton = UIBarButtonItem(title: "Left", style: .plain, target: self, action: #selector(leftNavigateEvent))
+        let rightButton = UIBarButtonItem(title: "Right", style: .plain, target: self, action: #selector(rightNavigateEvent))
         
         navigationItem.leftBarButtonItem = leftButton
         navigationItem.rightBarButtonItem = rightButton
@@ -78,11 +78,11 @@ class CategoriesViewController: UIViewController {
         
     }
     
-    @objc func left_Navigate_Event() {
+    @objc func leftNavigateEvent() {
         print("Clicked/Touched left_Navigate")
     }
     
-    @objc func right_Navigate_Event() {
+    @objc func rightNavigateEvent() {
         print("Clicked/Touched right_Navigate")
     }
 }
@@ -91,11 +91,24 @@ class CategoriesViewController: UIViewController {
 extension CategoriesViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let category = self.categoryViewModel.dataSource?.data.value[indexPath.row]
-        print("category name selected ", category!.name as Any)
-        print("category image selected ", category!.image as Any)
-        
-        let vc = ComponentsViewController()
-        self.navigationController!.pushViewController(vc, animated: true)
+        if let category = self.categoryViewModel.dataSource?.data.value[indexPath.row] {
+            
+            var vc = UIViewController()
+            
+            switch category.name {
+            case Title.Category.uiElement:
+                vc = UIElementsViewController()
+            case Title.Category.iosFrameworks:
+                vc = iOSFrameworksViewController()
+            case Title.Category.networks:
+                vc = NetworkViewController()
+            case Title.Category.git:
+                vc = GitViewController()
+            default:
+                vc = UIElementsViewController()
+            }
+            
+            self.navigationController!.pushViewController(vc, animated: true)
+        }
     }
 }

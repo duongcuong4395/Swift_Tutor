@@ -1,8 +1,8 @@
 //
-//  ComponentView.swift
+//  GitTableView.swift
 //  Swift_Tutor
 //
-//  Created by Duong Cuong on 3/20/21.
+//  Created by Duong Cuong on 4/16/21.
 //  Copyright © 2021 Duong Cuong. All rights reserved.
 //
 
@@ -13,7 +13,7 @@ import Foundation
 import UIKit
 
 
-class ComponentTableView: UITableView {
+class GitTableView: UITableView {
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: CGRect.zero, style: .grouped)
@@ -22,7 +22,7 @@ class ComponentTableView: UITableView {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         // Register cell with Id: id_Cell_Category
-        self.register(ComponentTableViewCell.self, forCellReuseIdentifier: Table.IdCell.component)
+        self.register(GitTableViewCell.self, forCellReuseIdentifier: Table.IdCell.git)
     }
     
     required init?(coder: NSCoder) {

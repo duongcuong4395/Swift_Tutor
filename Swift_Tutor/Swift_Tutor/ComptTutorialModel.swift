@@ -11,11 +11,12 @@ import Foundation
 
 // MARK: ComptTutorialModel
 
-public class ComptTutorialModel : ItemModel {
+class ComptTutorialModel : ItemModel {
 
-    public var componentName : String?
+    var isHidden : Bool?
     
-    override init(name : String, image : String) {
-        super.init(name: name, image: image)
+    override init(name : String, image : String, links : [String]) {
+        super.init(name: name, image: image, links: links)
+        self.isHidden = false
     }
 }
